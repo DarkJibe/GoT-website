@@ -1,0 +1,499 @@
+﻿figure{
+	margin: 0; 
+	padding: 0;
+}
+
+figcaption{
+	margin:1%; 
+	padding: 0;
+	font-size:14px;
+}
+
+a{z-index:1000;}
+
+a:link {
+	color:#3B6FA4;
+	z-index:1000;
+}
+
+a span{
+    position:absolute; 
+    margin-top:23px;
+    margin-left:-75px;
+    color:#aec4df;
+    background:#494C4B;
+    padding:15px;
+    box-shadow:0 0 2px rgba(0,0,0,.5);
+	transform:scale(0) rotate(-12deg);	 
+	transition:all .25s;
+	opacity:0;
+	text-align:center;
+	z-index:1000;
+}
+
+a:hover span, a:focus span{
+    transform:scale(1) rotate(0);  
+	opacity:1;
+	z-index:1000;
+}
+
+#img_mini{
+	width: 100px;
+	z-index:1000;
+}	 
+
+#img_mini2{
+	width: 300px;
+	z-index:1000;
+}	 
+
+
+/*  les a href */
+a:titre1{
+	text-decoration:none;
+	color:#fff;
+}
+
+#centre_img{
+	width: 100%;
+}
+
+#img_infographie{
+	width: 30%;
+	margin-left: 35%;
+	margin-right: 35%;
+}	 
+
+
+#img_g{
+	height: 100%;
+	float: right;
+	overflow: hidden;
+}
+
+#img_d{
+	height: 100%;
+	float: left;
+	overflow: hidden;
+}
+	
+#tableau_dico_var{
+	border-width: 1px; 
+ 	border-style: solid; 
+	border-color: black;
+	border-collapse: collapse;
+	padding: 5px;
+}
+
+#tableau_proba{
+	float: left;
+	margin-right: 4%;
+	border-width: 1px; 
+ 	border-style: solid; 
+	border-color: black;
+	border-collapse: collapse;
+	padding: 5px;
+}
+
+#cal_nudite{
+	float: left;
+	margin-right: 4%;
+	/* border-width: 1px;  */
+ 	/* border-style: solid;  */
+	/* border-color: black; */
+	/* border-collapse: collapse; */
+	padding: 15px;
+}
+
+#cal_nudite td { 
+	/* border-width: 1px; */
+	/* border-style: solid; */
+	/* border-color: black; */
+	/* border-collapse: collapse; */
+	padding-right: 4px;
+	padding-left: 4px;
+}
+
+#tableau_dico_var td { 
+	border-width: 1px;
+	border-style: solid;
+	border-color: black;
+	border-collapse: collapse;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+
+#titre_page{
+	font-size:22px;
+	text-align: center;
+	font-weight:bold;
+}
+
+#t_centre{
+	text-align: center;
+	padding-left: 1%;
+	padding-right: 1%;
+}
+
+#t_justifie{
+	text-align: justify;
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+#lifetest{
+ 	display: block;
+	margin-left: auto;
+	margin-right: auto ;
+	width:400px;
+	min-width:40%;
+}
+
+#plan_article{
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+#plan_article a, #t_centre a{
+	text-decoration: none;
+	color: #fff;
+}
+
+#droite a, #gauche a{
+	text-decoration: none;
+	color: #fff;
+}
+
+#droite_dico a, #droite_modele a, #gauche_modele a{
+	color: #aec4df;
+}
+
+#tableau_presentation td{
+width: 50%;
+text-align:justify;
+}
+
+h2{
+	font-size:17px;
+}
+
+#droite_dico{
+	overflow: scroll;
+}
+
+#gauche_modele{
+	position: fixed;
+	color: #FEFEFE;
+	top: 20%;
+	right: 0%;
+	width: 16.9%;
+	right: 8px;
+	bottom: 5%;
+	display: block;
+	background: #494C4B;
+	border-left: solid;
+	border-top: solid;
+	border-color: #FEFEFE;
+	border-width: 5px;
+	font-size: 2vh;
+	z-index:0;
+}
+
+h1{
+	font-size: 20px;
+}
+
+#centre0{
+	position: relative;
+	width: 100%;
+}
+
+#cal{
+	max-width: 100%;
+	width:1200px;
+}
+
+#centre1, #centre1_leg1{
+	margin-left: 2%;
+	width: 50%;
+	top: 3%;
+}
+
+#div_modele{
+	margin-left: auto;
+  margin-right: auto;
+  width: 700px;}
+
+#modele{
+	width:100%;
+}
+
+#modele55{
+	margin-left:10%;
+	width:80%;
+}
+	
+#centre_plein{
+	margin-left: 15%;
+	margin-right: 15%;
+	width: 70%;
+	top: 3%;
+}
+
+#centre_plein50{
+	margin-left: 25%;
+	margin-right: 25%;
+	width: 50%;
+	top: 3%;
+}
+	
+#centre_plein_leg{
+	font-size: 14px;
+	margin-bottom: 0;
+}
+
+#centre_fig5{
+	margin-right: 2%;
+	width: 50%;
+	top: 3%;
+}
+	
+#centre1_leg1{
+	font-size: 14px;
+	margin-left: 2%;
+	margin-bottom: 0;
+}
+
+#leg_model{
+	font-size: 18px;
+	margin:2%;
+	text-align: justify;
+}
+
+#centre1_leg50{
+	font-size: 14px;
+	margin-right: 2%;
+	margin-bottom: 0;
+	width: 40%;
+}
+
+#centre1_leg5{
+	font-size: 14px;
+	margin-right: 2%;
+	margin-bottom: 0;
+	width: 100%;
+}
+
+#centre1_leg5b{
+	font-size: 14px;
+	margin-left: 2%;
+	margin-bottom: 0;
+	width: 100%;
+}
+	
+#portrait_d, #portrait_g{
+	width:25%;
+}
+
+#floatleft30 {
+  margin-right:2%;
+  float: left;
+  width:30%;
+}
+#floatleft300 {
+  margin-right:2%;
+  float: left;
+  width:300px;
+}
+
+#floatright500 {
+  margin-left:2%;
+  float: left;
+  width:500px;
+}
+
+#floatright50pctn {
+  margin-right:2%;
+  float: left;
+  width:51%;
+}
+
+#floatright65pctn {
+  margin-right:2%;
+  float: left;
+  width:65%;
+}
+
+
+#floatright42pctn {
+  margin-right:2%;
+  float: left;
+  width:42%;
+}
+
+#floatleft54pctn {
+  margin-left:2%;
+  float: right;
+  width:54%;
+}
+
+#floatright600 {
+  margin-left:2%;
+  float: right;
+  width:600px;
+}
+
+#floatright40 {
+  margin-left:2%;
+  float: right;
+  width:40%;
+}
+
+#floatleft40 {
+  margin-right:2%;
+  float: left;
+  width:40%;
+}
+
+#floatleft50 {
+  margin-right:2%;
+  float: left;
+  width:50%;
+}
+
+#floatleft60_centre {
+  margin-right:2%;
+  float: left;
+  width:60%;
+  padding-left:20%;
+  padding-right:20%;
+}
+
+#centre50 {
+  margin-right:2%;
+  width:50%;
+  padding-left:25%;
+  padding-right:25%;
+}
+
+
+#floatright45 {
+  margin-left:2%;
+  float: right;
+  width:45%;
+}
+
+#floatright200{
+  margin-left:2%;
+  float: right;
+  width:200px;
+}
+
+#floatright500{
+  margin-left:2%;
+  float: right;
+  width:500px;
+}
+
+#floatright700{
+  margin-left:2%;
+  float: right;
+  width:600px;
+}
+
+#floatleft500{
+  margin-right:2%;
+  float: left;
+  width:500px;
+}
+
+
+#floatright20{
+  margin-left:2%;
+  float: right;
+  width:20%;
+}
+
+#centre1_leg2{font-size:14px;margin-right:2%;margin-bottom:0;width:50%;}
+
+#centre1_leg3{font-size:14px;margin-right:2%;margin-bottom:0;width:30%;}
+
+#legende, #legende_fig4{
+	text-align: center;
+	font-size: 15px;
+	margin: 2px;
+	padding: 2px;
+}	
+
+#tableau4_infographie td{
+width: 25%;
+vertical-align:top;
+padding:6px;
+}
+
+#tableau3 {
+width: 100%;
+}
+
+
+#tableau3 td{
+width: 33%;
+vertical-align:top;
+padding:6px;
+}
+
+#tableau5_infographie td{
+width: 20%;
+vertical-align:top;
+padding:6px;
+}
+
+#tableau4 td{
+width: 25%;
+text-align: justify;
+vertical-align:top;
+padding:6px;
+}
+
+#tableau2 td{
+width: 50%;
+text-align: justify;
+vertical-align:top;
+padding:6px;
+}
+
+#tableau4, #tableau4_infographie, #tableau5_infographie{
+	border-width: 1px; 
+ 	border-style: solid; 
+	border-color: black;
+}
+
+#leg_por{
+	font-style: italic;
+	text-align: center;
+	margin:0;padding:0;
+}
+
+#carte{
+height:100%;
+}
+
+#endessous{
+	clear : left;
+}
+
+#endessous_d{
+	clear : right;
+}
+
+#tableau1_d{
+	text-align: justify;
+	font-size: 17px;
+	clear : right;
+}
+
+#tableau1{
+	text-align: justify;
+	font-size: 17px;
+	clear : left;
+}

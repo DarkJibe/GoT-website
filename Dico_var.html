@@ -1,0 +1,853 @@
+﻿<html>
+    <head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<link href="r_femme.css" rel="stylesheet" media="all" type="text/css">
+		<link href="commun.css" rel="stylesheet" media="all" type="text/css">
+		<title>Dictionnaire des variables</title>	
+		<div id="all">
+			<a href="accueil.html"><div id="image">
+				<div id="G"><img class="img_g" src="images_site/visages.jpg" alt="When demographers play the game of thrones" id="img_g"/></div>
+				<div id="M">
+					<img class="centre" src="images_site/bandeau_femme.jpg" alt="When demographers play the game of thrones" id="centre"/>
+				</div>
+				<div id="D"><img class="img_d" src="images_site/visages.jpg" alt="When demographers play the game of thrones" id="img_d"/></div>
+			</div></a>
+			<div id="menu">
+				<ul id="menu_contenu">
+					<li id ="menu_actuel"><span>GENERALITES</span>
+						<ul>
+							<li><a href="Accueil.html">Accueil</a></li>
+							<li><a href="remerciements.html">Remerciements</a></li>
+							<li><a href="Bibliographie.html">Bibliographie</a></li>
+							<li><a href="nous_contacter.html">Nous contacter</a></li>
+						</ul>
+					</li>
+					<li style="background-color:#212223;"><span>NOTRE ETUDE</span>
+						<ul id="menu_inf">
+							<li><a href="qui_sommes_nous.html">Qui sommes-nous ?</a></li>
+							<li><a href="origines.html">Origines et déroulement du projet</a></li>
+							<li><a href="objectifs_etude.html">Objectifs de l'étude</a></li>
+							<li><span style="text-align:left">Notre base</span>
+                                <ul>
+                                    <li><a href="presentation_base.html">Présentation</a></li>
+                                    <li><a href="dico_var.html">Dictionnaires et statistiques des variables</a></li>
+                                </ul>
+							</li>
+							<li><a href="les_autres_etudes.html">Les autres études</a></li>
+						</ul>
+					</li>
+					<li><span>METHODOLOGIE</span>
+						<ul>
+							<li><a href="methodo-logit.html">Régression logistique</a></li>
+							<li><a href="methodo-duree.html">Courbes de survie</a></li>
+						</ul>
+					</li>
+					<li><span>RESULTATS</span>
+                        <ul>
+                            <li> <span>Articles thématiques</span>
+                                <ul>
+									<li><a href="un_monde_violent.html">Un monde violent</a></li>
+                                    <li><a href="r_femme.html">La place des femmes</a></li>
+                                    <li><a href="r_corps.html">La place du corps</a></li>
+                                    <li><a href="r_hasard.html">La mort frappe-t-elle vraiment au hasard ?</a></li>
+									<li><a href="r_cohorte.html">Une cohorte plus à l'abris ?</a></li>
+									<li><a href="r_all.html">titre_all</a></li>
+                                 </ul>
+                            </li>
+                            <li><a href="dossier.html">Dossiers universitaires</a></li>
+                        </ul>
+					</li>
+					<li><span>BONUS</span>
+						<ul>
+							<li><a href="proba_pop.html">Liste des probabilités</a></li>
+							<li><a href="liens_entre_var.html">Des caractéristiques liées entre elles</a></li>
+							<li><a href="qualite.html">Qualité de nos modèles</a></li>
+							<li><a href="modele_complet.html">Télécharger et lire une régression</a></li>
+							<li><a href="carte.html">Carte des décès</a></li>
+							<li><a href="cal_deces.html">Calendriers</a></li>
+							<li><a href="titre_page_demo.html">Bonus_demo</a></li>
+							<li><a href="podium.html">Podidum</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+	</head>
+	<body>
+	<div id="gauche">
+		<a href="proba_AZ.html"><p id="t_centre"><b>Probabilités de décès</b></p>
+		<img class="article_G" src="images_site/article_proba.jpg" alt="When demographers play the game of thrones" id="article_G"/>
+		<p id="t_justifie">Vous avez-lu nos articles. Oui, tous sans exception. Vous trouvez ça cool les liens, les photos et les risques de décéder sur le nom de chaque personnage. Mais … le nom de votre personnage préféré n’est jamais apparu. Faut dire qu’il faut être un expert de <i>GoT</i> pour autant apprécier Aggar. Vous avez drôlement envie de connaître sa probabilité de décéder ! Alors cliquer ici et vous aurez votre réponse. En plus, on peut classer par ordre alphabétique, du plus grand au plus faible risque de mourir … C’est drôle.    </a></p>
+	</div>
+	<div id="droite_dico">
+		<p id="t_centre"><a href="#top"><b>Liste des variables</b></a><br></p>
+		Type et sexe [<a href="#e1">déf</a>] [<a href="#stat_TYPE">stat</a>]<br>
+		Age et classe d'âge [<a href="#e2">déf</a>] [<a href="#stat_AGE11">stat</a>]<br>
+		Origine et culture [<a href="#e3a">déf</a>] [<a href="#stat_LIEUNAIS">stat</a>]<br>
+		Religion et lieu résidence [<a href="#e3b">déf</a>] [<a href="#stat_RELIGION">stat</a>]<br>
+		Statut marital et nombre d'enfant [<a href="#e4">déf</a>] [<a href="#stat_STATMAR">stat</a>]<br>
+		Corpulence [<a href="#e5">déf</a>] [<a href="#stat_CORP">stat</a>]<br>
+		Handicap [<a href="#e6">déf</a>] [<a href="#stat_HAND">stat</a>]<br>
+		Nudité [<a href="#e7">déf</a>] [<a href="#stat_CLASSNU">stat</a>]<br>
+		Pratique sexuelle [<a href="#e8">déf</a>] [<a href="#stat_DEVSEX">stat</a>]<br>
+		Allégeance [<a href="#e9">déf</a>] [<a href="#stat_ALLEG">stat</a>]<br>
+		Trahison [<a href="#e10">déf</a>] [<a href="#stat_TRAH">stat</a>]<br>
+		Dissident [<a href="#e11">déf</a>] [<a href="#stat_DISS">stat</a>]<br>
+		Richesse et noblesse [<a href="#e12">déf</a>] [<a href="#stat_RICH">stat</a>]<br>
+		Rôle politique [<a href="#e13">déf</a>] [<a href="#stat_RP">stat</a>]<br>
+		Nombre de tués [<a href="#e14">déf</a>] [<a href="#stat_TNN">stat</a>]<br>
+		Combattant [<a href="#e15">déf</a>] [<a href="#stat_COMB">stat</a>]<br>
+		Religieux [<a href="#e16">déf</a>] [<a href="#stat_RELIGIEUX">stat</a>]<br>
+		Prostitué [<a href="#e17">déf</a>] [<a href="#stat_PROST">stat</a>]<br>
+		Popularité et impop. [<a href="#e18">déf</a>] [<a href="#stat_POP">stat</a>]<br>
+		Nombre d'épisode d'apparition [<a href="#e19">déf</a>] [<a href="#stat_Ep.">stat</a>]<br>
+		Temps à l'écran [<a href="#e20">déf</a>] [<a href="#stat_TEMPSS7">stat</a>]<br>
+		Régularité [<a href="#REGULARITE">déf</a>] [<a href="#stat_REGULARITE">stat</a>]<br>
+		Cohorte [<a href="#COHORTE">déf</a>] [<a href="#stat_COHORTE">stat</a>]<br>
+		Variables liées à la mort [<a href="#e21">déf</a>]<br>
+		<p id="t_centre"><a href="#dico_stat"><b>Statistiques descriptives</b></a><br></p>
+	</div>
+	<div id="contenu">
+	
+	<p id="titre_page">Dictionnaires des variables : définition et statistiques descriptives</p>
+	
+	<p>Nous vous parlons de nudité, de prostition (article "<a href="r_femme.html">La femme dans <i>Game of Thrones</i></a>"), d'impopularité, de corpulence, handicap, déviance sexuelle (article "<a href="r_corps.html">La place du corps dans <i>Game of Thrones</i></a>"), de noblesse, d'impopularité (article "<a href="r_hasard.html">La mort frappe-t-elle vraiment au hasard ?</a>"), et bien d'autres caractéristiques des personnages !<br> Mais vous, lecteurs curieux de tout, vous vous demandez : comment sont construites ces variables ? Que signifient-t-elles réellement ? Exposent-elles les personnages à la mort ou les en protègent-elles ?</p>
+	
+	<p>Les réponses que vous cherchez sont ici !</p>
+	
+	<p>Nous vous proposons pour chaque variable :</p>
+	<p>- sa signification : à quelles caractéristiques individuelles correspond-elle ?<br><i>&nbsp;&nbsp; Exemple : que se cache-t-il derrière la variable "cohorte" ?</i></p>
+	<p>- d'éventuelles remarques quant à la construction de la variable <br><i>&nbsp;&nbsp;Exemple : comment connait-on la popularité et l'impopularité des personnages ?</i><br>
+	<p>- le nombre de personnages concernés<br><i>&nbsp;&nbsp;Exemple : combien de personnages sont des prostitués ?</i></p>
+	<p>- la part de personnages décédés au cours de la série<br><i>&nbsp;&nbsp;Exemple : parmi les Bolton combien décèdent avant la saison 7 ? Et parmi les Stark ?</i></p>
+	<p>- l'évolution des risques de décès en fonction du nombre d'heures de survie atteinte par le personnage<br><i>&nbsp;&nbsp;Exemple : les personnages féminins et les personnages masculins décèdent-ils à la même vitesse dans Game of Thrones ?</i></p>
+	</p>
+	
+	<p>L'ensemble de ces éléments sont disponibles dans les <a href="dossier.html">dossiers universitaires</a>.</p>
+	
+	<p>si vous trouvez une erreur, vous pouvez jubiler et nous sommes très fiers de vous. Par contre, plutôt que de garder ça pour vous faites nous en part <a href="nous_contacter.html">ici</a> ! Faites de même si nous avons oublié une variable qui vous semblerait intéressante.</p>
+	
+	<h1><a id="top" >Dictionnaire des variables</a></h1>
+	<p>Cliquer sur le nom d'une variable pour connaître ses statistiques descriptives complètes (nombre de personnages concernés, part de personnages décédés, courbes de survie)</p>
+		<table id="tableau_proba" border=6 align="center">
+			<td align="center"><B>Nom de la variable <br><i>[Type de variable]<b></i></td><td align="center"><b>Description</b></td>
+<tr><td align="center"><a id="e1"> <a id="TYPE"> Type </a></A><a href="#stat_TYPE"> TYPE </a>  <I> [Textuelle] </I>  </td><td align="center">Ex de Non humain : géants, marcheurs blancs …</td></tr>
+<tr><td align="center"><a id="SEXE"> Sexe </a><a href="#stat_SEXE"> SEXE</a>  <I> [Dichotomique] </I> &nbsp</td><td align="center"><b>Homme/Femme</b>.<br>Les dragons, non sexables, sont considérés comme des mâles (noms masculins …)</td></tr>
+<tr><td align="center"><a id="e2">Age</a> <a id="AGE11">AGE</a> <I> [Textuelle] </I> &nbsp</td><td align="center">De <b>0 an</b> à <b>99 ans</b> révolus.<br>Age du personnage lors de sa première apparition. <b>NC</b> : les animaux et les non-humains.<br>D’après les scenarii et les informations recueillies sur <a href="http://fr.gameofthrones.wikia.com/wiki/Wiki_Game_of_Thrones"><I>fandom</i></a></td></tr>
+<tr><td align="center">Classe d’âge <a href="#stat_AGE11"> AGE11 </a>  <I> [Numérique discrétisée] </I> &nbsp</td><td align="center"><b>Classe d’âge de 5 ans</b> correspondante. <br>Exceptions : <B>Moins de 10 ans, 45-60 ans</b> et <b>Plus de 60 ans</b> car les faibles effectifs ne permettaient pas de faire autrement.</td></tr>
+<tr><td align="center"><a id="e3a"><a id="LIEUNAIS">Lieu de naissance </A></A><a href="#stat_LIEUNAIS"> LIEUNAISS</a>  <I> [Textuelle] </I> &nbsp</td><td align="center"><b>Nord du Mur, Winterfell, Les Jumeaux, Port-Réal, Braavos, Mer des Dothrakis</B>. Les autres effectifs sont trop faibles.<br>Cartographie envisageable.</td></tr>
+<tr><td align="center"><a id="CULT">Culture </A><a href="#stat_CULT"> CULT </A> <I> [Textuelle] </I> &nbsp</td><td align="center"><I>Cultures de Westeros</I> : <b>Primitive</b> (sauvageon, clans, enfants des forêts), <b>Andale</B> (habitants de Westeros dont on ne connait pas la culture exacte + hommes du Val et des Terres de l’orage), <b>Dornienne</b> et <b>Nordienne</b> (peuple n’ayant pas été conquis par les Andaux), <b>Fernée</b> (conquis par les Andales mais religion locale), <b>Région des rivières</B> (culture très militaire du fait de l’implication historique dans de nombreuses révoltes. Terre fertile mais marécageuse donc à aménager : culture du labeur), <b>Ouest de Westeros</b> (dont le Bief : mode de vie urbain, gout du luxe nourrit par la richesse des terres), <b>Terre de la Couronne</b> (culture de déférence face au roi qui dirige directement ses terres sans gouverneur). Cultures d’Essos : <b>Cités Libres</b> (Braavos, Lorath, Lys, Myr, Norvos, Pentos, Qohor, Tyrosh, Volantis), <b>Ghiscarienne</b> (Cités-Etats oligarchiques de la baie des serfs : langue valyrienne, religion locale, sociétés esclavagistes. Meereen, Yunkai Astapor …), <b>Plaine d’Essos</b> (Dothrakis et Lhazariens : peuples nomades), <b>Autre Essos</b> (Asshai, Qarth, Immaculés) <b>NC</b> : Animaux, nourrissons, morts …</td></tr>
+<tr><td align="center"><a id="e3b"><a id="RELIGION">Religion </a></a><a href="#stat_RELIGION"> RELIGION </a>  <I> [Textuelle] </I> &nbsp</td><td align="center"><b>Aucune pratique religieuse</b> (personnage dont on sait qu’il n’a aucune pratique religieuse), <b>Les Sept</b> (y compris secte des Moineaux), <b>R’hllor, Anciens Dieux</b> (dont enfants de la forêt et corneille à trois yeux), <b>Les Grands</b> (Etalons et Bergers), <b>Dieu noyé, Autre</b> (Dieu Multiface, ghiscarie, marcheurs blancs), ? (personnage dont on ne connait pas la religion), <b>NC</b> (Animaux et nourrissons).</td></tr>
+<tr><td align="center"><a id="RESPRINC">Résidence principale </a><a href="#stat_RESPRINC"> RESPRINC </a>  <I> [Textuelle] </I> &nbsp</td><td align="center"><b>Nord du Mur, Chateaunoir, Winterfell, Les Jumeaux, Les Eyriés, Port Réal, Braavos, Meereen, Ailleurs, Itinérant</b> (lorsque le personnage n’a pas de résidence principale, qu’il en change au cours de la série sans que l’on puisse en déterminer une plus longue que l’autre ou qu’il est nomade : ex : Dothraki, Fraternité sans Bannières …), <b>Inconnu</b> (lorsque la zone où le personnage est vu n’est pas connue). <br>La résidence principale est celle où le personnage est le plus souvent vu à l’écran et non la résidence supposée. Par exemple : la famille Karstark a son siège dans la forteresse de Karhold. Pour autant <a href="http://gameofthrones.wikia.com/wiki/Alys_Karstark">Alys Karstark<span><img class='img_mini' src='images_site/portraits/Alys_Karstark.jpg' alt='Photo du personnage' id='img_mini'/><br>proba décès :<br> 6%</span></a> n’est vue qu’à Winterfell. Sa résidence principale est donc selon nos critères Winterfell. Nous considérons en effet que ses risques de décéder son ceux d’une personne qui réside à Winterfell dans la mesure où les personnages décèdent très majoritairement à l’écran.</td></tr>
+<tr><td align="center"><a id="e4"><a id="STATMAR">Statut marital</a></a> <a href="#stat_STATMAR"> STATMAR </a>  <I> [Textuelle] </I> &nbsp</td><td align="center"><b>Marié.e, Célibataire, Veuf, Vœux de chasteté</b> (automatique pour les gardes de nuit, les garde royaux ainsi que les septons et septas), <b>Inconnu ou NC</b> (personnage dont on ne connaît pas le statut marital + animaux et nourrissons). </br>Nous avons essayé de faire une variable de respect du statut qui aurait valu “Non” si un personnage marié trompe son partenaire (ex : <a href="http://gameofthrones.wikia.com/wiki/Cersei_Lannister">Cersei Lannister<span><img class='img_mini' src='images_site/portraits/Cersei_Lannister.jpg' alt='Photo du personnage' id='img_mini'/><br>proba décès :<br> 11%</span></a> …) ou si un personnage ayant fait voeux de chasteté ne les respecte pas (<a href="http://gameofthrones.wikia.com/wiki/Jon_Snow">Jon Snow<span><img class='img_mini' src='images_site/portraits/Jon_Snow.jpg' alt='Photo du personnage' id='img_mini'/><br>proba décès :<br> 2%</span></a> ou <a href="http://gameofthrones.wikia.com/wiki/Jaime_Lannister">Jaime Lannister<span><img class='img_mini' src='images_site/portraits/Jaime_Lannister.jpg' alt='Photo du personnage' id='img_mini'/><br>proba décès :<br> 1%</span></a>). Toutefois les effectifs ne l’ont pas permis.</td></tr>
+<tr><td align="center"><a id="ENF">Nombre d’enfant</a> <a href="#stat_ENF"> ENF</a>  <I> [Textuelle] </I> &nbsp</td><td align="center">Le personnage a t-il des enfants ?<b> Oui, Non, Inconnu</b></td></tr>
+<tr><td align="center"><a id="e5"><a id="CORP">Corpulence </a><a href="#stat_CORP"> CORP </a>  <I> [Textuelle] </I> &nbsp</td><td align="center"><b>Moins que le moyenne, Moyenne, Plus que la moyenne, Musclé, NC</b> (animaux et nourrissons). </br>Lorsque les mensurations de l’acteur étaient disponible sur internet, nous nous sommes appuyés sur l’IMC (poids en kg / taille en cm ² : valeur de la modalité moyenne entre 18,5 et 25). En l’absence d’informations et pour limiter la part de l’arbitraire, nous avons recueilli plusieurs avis différents.</td></tr>
+<tr><td align="center"><a id="e6"><a id="HAND">Handicap </a></a><a href="#stat_HAND"> HAND </a> <I> [Textuelle] </I> &nbsp</td><td align="center"><b>Bâtard, Oui hors bâtard, Non. </b></br>Nous considérons que la batardise est un handicap social. Nous aurions voulu différencier les handicaps physiques et mentaux mais les effectifs ne le permettaient pas. </td></tr>
+<tr><td align="center"><a id="e7"><a id="NU">Nudité </a></a>NU <I> [Dichotomique ] </I> &nbsp</td><td align="center">Le personnage apparaît-il nu au cours de la série ? <B>Oui/Non</B>. <br>La zone du corps dévoilée peut être le buste (poitrine pour les personnages féminins), les fesses, le sexe… Les ébats sont aussi comptabilisés même si les personnages sont habillés. Nous ne jugeons pas la dimension érotique d’une scène. Le buste musclé de <a href="http://gameofthrones.wikia.com/wiki/Jon_Snow">Jon Snow<span><img class='img_mini' src='images_site/portraits/Jon_Snow.jpg' alt='Photo du personnage' id='img_mini'/><br>proba décès :<br> 2%</span></a> vaut celui purulent de <a href="http://gameofthrones.wikia.com/wiki/Jorah_Mormont">Jorah Mormont<span><img class='img_mini' src='images_site/portraits/Jorah_Mormont.jpg' alt='Photo du personnage' id='img_mini'/><br>proba décès :<br> 1%</span></a>
+.</td></tr>
+<tr><td align="center">Nombre de scènes où le buste est visible BUSTE <I> [Numérique] </I> &nbsp</td><td align="center">Combien de fois le buste du personnage est-il visible au cours de la série ? </td></tr>
+<tr><td align="center">Nombre de scènes où les ébats du personnages sont mis en scène EBATS  <I> [Numérique] </I> &nbsp</td><td align="center">Combien de fois les ébats du personnages sont-ils mis en scène au cours de la série ?  <br>Il s’agit d’une variable construite d’une manière particulière. Si la scène ne répond pas aux critères pour une une scène “entièrement nue” mais que les personnages ont des rapports sexuels (préliminaire ou acte en lui même, qu’importe ce qui est montré), alors cette scène est une scène d’ébat.</td></tr>
+<tr><td align="center">Nombre de scènes où le personnage apparaît entièrement nu  ENTIER <I> [Numérique] </I> &nbsp</td><td align="center">Combien de fois le personnage apparaît-il entièrement nu au cours de la série ? Il n’est pas pour autant nécessaire de voir toutes les partie du corps. Certaines peuvent demeurer cachées par des objets … Mais le spectateur sait que le personnage est entièrement nu. Faute de pouvoir créer une variable à part entière (effectif trop faible), nous avons aussi comptabilisé les scènes où l’on ne voit que le sexe.</td></tr>
+<tr><td align="center"><a id="CLASSNU">Score total de nudité </a><a href="#stat_CLASSNU"> NBNU </a>  <I> [Numérique] </I> &nbsp</td><td align="center">Nous avons créé un indicateur synthétisant la rapport à la nudité du personnage en pondérant le poids de chaque type de nudité (1 pour le buste, 2 pour les ébats, 3 pour la nudité totale). Certains pourront objecter que le potentiel érotique d’une poitrine féminine dépasse celui d’un buste masculin. Encore une fois, nous n’avons pas pris en compte la dimension érotique de la scène. Celà aurait laissé trop de place à l’arbitraire. </td></tr>
+<tr><td align="center"><a id="e8"><a id="DEVSEX">Pratique sexuelle </a></A>jugée dans la série comme déviante <a href="#stat_DEVSEX"> DEVSEX </a>  <I> [Dichotomique] </I> &nbsp</td><td align="center">Le personnage a t-il des penchants sexuels considérés par ses homologues comme déviants ? <b>Oui/Non</b>.<br>Il ne s’agit nullement d’un jugement de notre part. Ainsi, l’homosexualité apparaît comme déviante dans l’univers de la série puisqu’elle est sévèrement réprimée.</td></tr>
+<tr><td align="center"><a id="e9"><a id="ALLEG">Allégeance </a></a><a href="#stat_ALLEG"> ALLEG </a>  <I> [Textuelle] </I> &nbsp</td><td align="center">Allégeances (comprise comme une obligation de fidélité consacrée par un serment ou à défaut par la naissance) par taille croissante : <B>Bolton, Dissident Baratheon</B> (Que ce soit <a href="http://gameofthrones.wikia.com/wiki/Stannis_Baratheon">Stannis<span><img class='img_mini' src='images_site/portraits/Stannis_Baratheon.jpg' alt='Photo du personnage' id='img_mini'/><br>proba décès :<br> 99%</span></a> ou <a href="http://gameofthrones.wikia.com/wiki/Renly_Baratheon">Renly<span><img class='img_mini' src='images_site/portraits/Renly_Baratheon.jpg' alt='Photo du personnage' id='img_mini'/><br>proba décès :<br> 100%</span></a> une fois qu’ils se sont déclarés rosi), <B>Esclavagiste</B> (Membre de l’aristocratie marchande et esclavagiste d’Essos, y compris les Treize même si le terme d’esclavagiste est impropre), <B>Greyjoy</B> (du temps de <a href="http://gameofthrones.wikia.com/wiki/Balon_Greyjoy">Balon<span><img class='img_mini' src='images_site/portraits/Balon_Greyjoy.jpg' alt='Photo du personnage' id='img_mini'/><br>proba décès :<br> 74%</span></a>, ensuite <a href="http://gameofthrones.wikia.com/wiki/Yara_Greyjoy">Yara<span><img class='img_mini' src='images_site/portraits/Yara_Greyjoy.jpg' alt='Photo du personnage' id='img_mini'/><br>proba décès :<br> 31%</span></a> rejoint les Targaryen et <a href="http://gameofthrones.wikia.com/wiki/Euron_Greyjoy">Euron<span><img class='img_mini' src='images_site/portraits/Euron_Greyjoy.jpg' alt='Photo du personnage' id='img_mini'/><br>proba décès :<br> 66%</span></a> les Lannister), <B>Peuple libre</B> (dont Géants, Thenn ...), <B>Dothraki</B> (avant que <a href="http://gameofthrones.wikia.com/wiki/Drogo">Drogo<span><img class='img_mini' src='images_site/portraits/Drogo.jpg' alt='Photo du personnage' id='img_mini'/><br>proba décès :<br> 98%</span></a> promette à <a href="http://gameofthrones.wikia.com/wiki/Daenerys_Targaryen">Daenerys Targaryen<span><img class='img_mini' src='images_site/portraits/Daenerys_Targaryen.jpg' alt='Photo du personnage' id='img_mini'/><br>proba décès :<br> 17%</span></a> le trône de Fer), <B>Frey, Targaryen, Fanatiques religieux</B> (Fraternité sans Bannières, Septons/Septas, Foi militante …), <B>Garde de Nuit, Autre</B> (Allégeances trop faibles en effectif pour être distinguées), <B>Aucune, Lannister</B> (y compris <a href="http://gameofthrones.wikia.com/wiki/Joffrey_Baratheon">Joffrey<span><img class='img_mini' src='images_site/portraits/Joffrey_Baratheon.jpg' alt='Photo du personnage' id='img_mini'/><br>proba décès :<br> 90%</span></a>, <a href="http://gameofthrones.wikia.com/wiki/Tommen_Baratheon">Tommen<span><img class='img_mini' src='images_site/portraits/Tommen_Baratheon.jpg' alt='Photo du personnage' id='img_mini'/><br>proba décès :<br> 83%</span></a> et <a href="http://gameofthrones.wikia.com/wiki/Myrcella_Baratheon">Myrcella<span><img class='img_mini' src='images_site/portraits/Myrcella_Baratheon.jpg' alt='Photo du personnage' id='img_mini'/><br>proba décès :<br> 93%</span></a> même s’ils portent le nom de Baratheon) <B>Stark</B>. </br>Nous comprenons dans une allégeance les membres de la famille, les vassaux, les serviteurs ainsi que les combattants. Lorsque le serment est prêté pour infiltrer une allégeance, il ne compte pas (ex : <a href="http://gameofthrones.wikia.com/wiki/Locke">Locke<span><img class='img_mini' src='images_site/portraits/Locke.jpg' alt='Photo du personnage' id='img_mini'/><br>proba décès :<br> 93%</span></a> infiltre la Garde de Nuit pour les intérêts des Bolton. Il reste ainsi Bolton). </td></tr>
+<tr><td align="center"><a id="ENN"> Ennemis </a><a href="#stat_ENN">ENN</a> <I> [Textuelle] </I> &nbsp</td><td align="center"><B>Esclavagiste, Marcheur blanc, Peuple libre, Targaryen, Garde de Nuit, Autre, Aucun, Lannister, Stark</B>.</br> Il s’agit de l’allégeance ennemie. Lorsqu’aucun ennemi principal ne se détache (<a href="http://gameofthrones.wikia.com/wiki/Petyr_Baelish">Petyr Baelish<span><img class='img_mini' src='images_site/portraits/Petyr_Baelish.jpg' alt='Photo du personnage' id='img_mini'/><br>proba décès :<br> 4%</span></a> ou <a href="http://gameofthrones.wikia.com/wiki/Cersei_Lannister">Cersei Lannister<span><img class='img_mini' src='images_site/portraits/Cersei_Lannister.jpg' alt='Photo du personnage' id='img_mini'/><br>proba décès :<br> 11%</span></a> …), nous avons mis la modalité “autre”</td></tr>
+<tr><td align="center"><a id="e10"><a id="TRAH">Trahison </a></a><a href="#stat_TRAH"> TRAH </a>  <I> [Dichotomique] </I> &nbsp</td><td align="center">Le personnage a t-il trahis au cours de la série ? <B>Oui/Non</B></br> Nous comptabilisons ici les personnages trahissant les membres de leur allégeance, revenant sur leur parole ou leur alliance, complotant … Le meurtre d’un personnage jusqu’alors allié n’a pas été comptabilisé comme une trahison mais comme un meurtre (voir variables (<a href="#TNN">TNN</a>, <a href="#TN">TN</a>, <a href="#COMM">COMM</a>).</td></tr>
+<tr><td align="center"><a id="e11"><a id="DISS">Dissident.e </a></a><a href="#stat_DISS"> DISS </a>  <I> [Dichotomique] </I> &nbsp</td><td align="center">Le personnage s’oppose t-il au système politique ou au gouvernement en place (trône de fer détenu par les Baratheon puis les Lannister) ? <B>Oui/Non</B><br> Il s’agit là d’une dissidence plus idéologique que factuelle. Notre critère de distinction réside dans la reconnaissance ou non de la légitimité du pouvoir centrale et non dans l’opposition militaire. Les membres d’une allégeance dissidente (Stark après la mort de <a href="http://gameofthrones.wikia.com/wiki/Ned_Stark">Ned<span><img class='img_mini' src='images_site/portraits/Ned_Stark.jpg' alt='Photo du personnage' id='img_mini'/><br>proba décès :<br> 100%</span></a> ou les Targaryen …) sont par extension considérés comme dissident. Inversement pour les allégeance non dissidente (Frey, Bolton …). Nous aurions aussi pu distinguer parmi les non-dissident les soutiens actifs des indifférents.</td></tr>
+<tr><td align="center"><a id="e12"><a id="RICH">Richesse </a></a><a href="#stat_RICH"> RICH </a>  <I> [Textuelle ordonnée] </I> &nbsp</td><td align="center"><b>Sans biens, Protection financière</b> (personnage ne disposant d’aucun bien ou de très peu en son nom propre mais disposant d’une protection financière d’un puissant ou d’une institution. Ex : Garde de Nuit, <a href="http://gameofthrones.wikia.com/wiki/Jorah_Mormont">Jorah Mormont<span><img class='img_mini' src='images_site/portraits/Jorah_Mormont.jpg' alt='Photo du personnage' id='img_mini'/><br>proba décès :<br> 1%</span></a>, Garde royale, servant.e.s, prostitué.e.s, esclaves …), <b>Capital foncier</b> (nous comprenons ici n’importe quel personnage disposant de terres. Nous considérons en effet que <I>Game of Thrones</I> met en scène un modèle social et économique assez proche de celui observé dans Europe occidentale médiévale. La terre, constitue le fondement de la richesse et du statut de puissant. C’est en effet ce qui permet de dominer les autres hommes dans une société presque exclusivement rurale : 6 ville dans tout Westeros. De plus c’est dans les campagnes qui nourrissent les hommes que les richesses sont créées), <b>Grande richesse foncière ou pécuniaire.</b> </br>Initialement, nous avions différencier les grands propriétaires fonciers (Lannister, Tyrell …) des très riches marchands (esclavagistes d’Essos essentiellement mais pas exclusivement). Toutefois, les effectifs n’ont pas permis de conserver ce niveau de détail. Nous les avons donc réuni en une variable regroupant les personnages très  fortunés. Nous aurions pu regrouper autrement (propriétaires fonciers qu’ils soient petits ou grands contre riches marchands). </td></tr>
+<tr><td align="center"><a id="NOBL">Noblesse </a><a href="#stat_NOBL"> NOBL </a>  <I> [Textuelle ordonnée] </I> &nbsp</td><td align="center"><b>Roturier ou ancien noble</b> (personnages non noble + nobles intégrant des institutions où la noblesse n’est pas reconnue : garde royale, Garde de Nuit, Foi Militante + nobles mis au ban de la société par exemple <a href="http://gameofthrones.wikia.com/wiki/Jorah_Mormont">Jorah Mormont<span><img class='img_mini' src='images_site/portraits/Jorah_Mormont.jpg' alt='Photo du personnage' id='img_mini'/><br>proba décès :<br> 1%</span></a>), <b>Non héritier non seigneur</b> (membre d’une famille noble mais ne pouvant prétendre à la diriger), Seigneur vassal ou héritier de vassal (seigneur ou héritier ayant prêté allégeance à un seigneur. Il s’agit donc de massaux qui ont des obligations militaires mais aussi de conseil ...), <b>Seigneur ou héritier de seigneur</b> (nous comprenons ici les grands seigneurs qui gouvernent une province : Lannister, Tyrell, Stark, Martell, Arryn, Tully/Frey), <b>NC</b> (Animaux et nourrissons )</td></tr>
+<tr><td align="center"><a id="e13"><a id="RP">Rôle politique </a></a><a href="#stat_RP"> RP </a>  <I> [Dichotomique] </I> &nbsp</td><td align="center">Le personnage a t-il un rôle politique au cours de la saison ? <B>Oui/Non</B> Il s’agit d’un rôle politique au sens large : rôles militaires (Commandant de la Garde de Nuit …), rôles religieux (Grands Septons, Grandes Prêtresses …), rôles politiques centraux (Rois, conseillers, membres du conseil restreint …) ou territoriaux (gouverneurs, lords/ladies …) … Nous comptons indistinctement les personnages régnants, héritiers, consorts ou douairiers … Nous avions pensé à créer une variable continue pour évaluer l’importance de ce rôle (un roi aurait ainsi eu plus de points qu’un lord et un régnant qu’un héritier … Toutefois le pouvoir des différents lords n’est guère comparable. Nous avons donc abandonné cette idée qui nous est apparue comme laissant trop de place à l’arbitraire. </td></tr>
+<tr><td align="center">Statut politique  STATPO <I> [Textuelle] </I> &nbsp</td><td align="center"><B>Aucun rôle politique, Régnant.e, Consort</B> (le rôle politique n’est pas détenu en propre. Il est détenu par le conjoint), <B>Héritier.ère</B> (le rôle politique n’est pas détenu en propre. Il est détenu par l’ascendant qu’il soit direct ou collatéral. Lorsqu’il y a plusieurs enfants, nous appliquons la règle en vigueur dans Game of Thrones c’est à dire la primo-géniture masculine), <B>Mère/Père</B> (le rôle politique n’est pas détenu en propre. Il est détenu par le descendant)</td></tr>
+<tr><td align="center"><a id="REGN">Régnant </a><a href="#stat_REGN"> REGN </a>  <I> [Dichotomique] </I> &nbsp</td><td align="center">Le personnage a t-il joué un rôle politique en personne ? (ni par l’intermédiaire de son conjoint, ni par celui de ses ascendants …) <b>Oui/Non</b></td></tr>
+<tr><td align="center"><a id="CR">Conseil restreint </a><a href="#stat_CR"> CR </a>  <I> [Dichotomique] </I> &nbsp</td><td align="center">Le personnage a t-il fait parti du conseil restreint (cercle restreint de personnes proches du roi qui sont chargées de le conseiller dans ses décisions politiques, administratives et économiques) ? <B>Oui/Non</B> <br>Dans un premier temps, nous avons voulu différencier les fonctions majeures (Main, protecteur du royaume, régent … qui dirigent le conseil restreint en l’absence de monarque) des fonctions secondaires (Grand Argentier, Grand Mestre, Maître des chuchoteurs, Maître des lois, Maître des navires, parfois Commandant de la garde royale ou de la garde civile ...). Les effectifs n’ont toutefois pas permis ce niveau de détail. </td></tr>
+<tr><td align="center"><a id="e14"><a id="TNN">Tués non nommés </a></a><a href="#stat_TNN"> TNN </a>  <I> [Numérique discrétisée] </I> &nbsp</td><td align="center">Nombre de victimes du personnage n’ayant pas de nom (et donc ne figurant pas dans notre base) : <b>N’a tué aucun personnage non nommé, A tué entre 1 et 3 personnages non nommés, A tué 4 personnages non nommés ou plus</b></td></tr>
+<tr><td align="center"><a id="TN">Tués nommés </a><a href="#stat_TN"> TN </a>  <I> [Numérique discrétisée] </I> &nbsp</td><td align="center">Nombre de victimes du personnage ayant un nom (et donc figurant dans notre base) : <B>N’a tué aucun personnage nommé, A tué entre 1 et 2 personnages nommés, A tué 3 personnages nommés ou plus</B></td></tr>
+<tr><td align="center"><a id="COMM">Commandités </a><a href="#stat_COMM"> COMM </a>  <I> [Dichotomique] </I> &nbsp</td><td align="center">Le personnage a t-il commanditer des assassinats ? <B>Oui/Non</B> </br>Organisation d’un assassinat, d’un crime même lorsqu’il est indirect. Par exemple, <a href="http://gameofthrones.wikia.com/wiki/Cersei_Lannister">Cersei Lannister<span><img class='img_mini' src='images_site/portraits/Cersei_Lannister.jpg' alt='Photo du personnage' id='img_mini'/><br>proba décès :<br> 11%</span></a> commandite l’explosion du Septuaire afin de tuer ses ennemis directs (Foi militante, Tyrell, Certains membres de sa propre famille qui conteste son pouvoir …). Tous les personnages nommés décédant lors de cet évènement sont comptabilisés même s’ils ne s'agissait pas de la cible première. Compte tenu des effectifs, il n’était pas envisageable de discrétiser la variable numérique. Nous n’avons pas non plus laissé la variable en numérique car nous avions peur d’un effet non linéaire sur la mortalité. </td></tr>
+<tr><td align="center"><a id="POPTN">Popularité des tués nommés </a><a href="#stat_POPTN"> POPTN </a>  <I> [Numérique discrétisée] </I> &nbsp</td><td align="center">Nombre de votes de popularité recueillis par les personnages nommés tués par l'individu. <b>N’a tué aucun personnage nommé, N’a tué aucun personnage nommé populaire, Moins de 10.000 votes de popularité, Plus de 10.000 votes de popularité.</b></td></tr>
+<tr><td align="center"><a id="IMPOPTN">Impopularité des tués nommés </a><a href="#stat_IMPOPTN"> IMPOPTN </a>  <I> [Numérique discrétisée] </I> &nbsp</td><td align="center">Nombre de votes d’impopularité recueillis par les personnages nommés tués par l'individu. <b>N’a tué aucun personnage nommé, N’a tué aucun personnage nommé impopulaire, Moins de 70 votes d’impopularité, Plus de 70 votes d’impopularité.</b><br>Nous n’avons pas trouvé de sondage existant. Nous en avons donc créé un grâce à google form. Les répondants étaient invités à voter pour leurs personnages détestés. Après diffusions sur plusieurs pages de fan, et auprès de nos propres réseaux, nous avons finalement obtenu 2437 formulaires de réponse</td></tr>
+<tr><td align="center"><a id="e15"><a id="COMB">Combattant.e </a></a><a href="#stat_COMB"> COMBAT </a>  <I> [Textuelle] </I> &nbsp</td><td align="center"><b>Non combattant.e, Garde royal.e</b> (y compris les gardes des dissidents au trône), <b>Chevalier</b> (nous les différencions car il s’agit d’un rang et d’un honneur. Ils sont supposés suivre un code d’honneur) et <b>Autre combattant.e.</b> Nous n’incluons pas la modalité Garde de Nuit (qui reste Autre combattant) car il s’agit déjà d’une allégeance.</td></tr>
+<tr><td align="center"><a id="e16"><a id="RELIGIEUX">Religieux.se </a></a><a href="#stat_RELIGIEUX"> RELIGIEUX </a>  <I> [Dichotomique] </I> &nbsp</td><td align="center">Le personnage fait-il partie d’une organisation religieuse ? <b>Oui/Non</b> <br>Dans la modalité Oui, nous comprenons à la fois séculiers (septa, septon, grand septon), les réguliers ainsi que les personnages qui combattent au nom d’une divinité (Fraternité sans Bannières, Sans-Visage).</td></tr>
+<tr><td align="center"><a id="e17"><a id="PROST">Prostitué.e </a></a><a href="#stat_PROST"> PROST </a>  <I> [Dichotomique] </I> &nbsp</td><td align="center">Le personnage se prostitue-t-il, que cela soit de son plein gré ou contre son gré (esclave détenu.e par un maître qui le.la force à travailler dans un bordel) : <b>Oui/Non</b></td></tr>
+<tr><td align="center"><a id="e18"><a id="POP">Popularité </a></a><a href="#stat_POPTN"> POP </a>  <I> [Numérique discrétisée] </I> &nbsp</td><td align="center">Nombre de personnes ayant indiqué que le personnage est leur préféré.</td></tr>
+<tr><td align="center"><a id="IMPOP">Impopularité </a><a href="#stat_IMPOP"> IMPOP </a>  <I> [Numérique discrétisée] </I> &nbsp</td><td align="center">Nombre de votants ayant indiqué que le personnage fait partie de ceux qu’ils détestent le plus.</td></tr>
+<tr><td align="center"><a id="e19"><a id="Ep.">Ep.s d’apparition </a></a> <a href="#stat_Ep."> Ep. </a>  <I> [Numérique discrétisée] </I> &nbsp</td><td align="center">Discrétisation du nombre d’épisodes d’apparition : <b>1 à 2 épisodes, 3 à 4 épisodes, 5 à 20 épisodes, 20 à 30 épisodes, plus de 30 épisodes. </b></td></tr>
+<tr><td align="center"><a id="e19">Ep.s de soumission</a> EPI_SOUMIS <I> [Numérique discrétisée] </I> &nbsp</td><td align="center">
+Différence entre l'épisode d'entrée (première apparition à l'écran du personnage) et l'épisode de sortie (disparition visuelle ou décès)</td></tr>
+<tr><td align="center"><a id="e20"><a id="TEMPSS7">Temps à l’écran </a></a><a href="#stat_TEMPSS7"> TEMPSS7 </a>  <I> [Numérique] </I> &nbsp</td><td align="center">Il ne s’agit pas de la durée des scènes auxquelles le personnage participe mais du temps durant lequel le personnage est filmé et apparaît effectivement à l’écran. <br> Nous avons utilisé deux sources pour créer cette variable. Une base recense le temps à l’écran à l’issu de la saison 7 lorsqu’ils sont au minimum de 5min. Pour les personnages non recensés par cette première base, nous avons utilisé le temps à l’écran à l’issu de la saison 6 (base indiquant tout temps d’apparition supérieur à 1 min). Pour les animaux qui n’y figurait jamais ainsi que pour les personnages récurrents mais très peu connus du grand
+public, nous avons chronométré nous même les temps d’apparition. 
+<br><a href="https://www.theatlas.com/charts/HJrdxDNKW">Site source</a></td></tr>
+<tr><td align="center"><a id="TEMPS_MOYEN_VU">TEMPS_MOYEN_VU </a><a href="#stat_TEMPS_MOYEN_VU"> TEMPS_MOYEN_VU </a>  <I> [Numérique discrétisée] </I> &nbsp</td><td align="center">Combien de temps le personnage passe-t-il de temps à lrécran par épisode d'apparition ?<br> Vaut le temps à l'écran en numérique (variable TEMPSS7) divisé par le nombre d'épisodes vus (variable Ep.)</td></tr>
+<tr><td align="center"><a id="REGULARITE">Régularité d'apparition </a><a href="#stat_REGULARITE"> REGULARITE </a>  <I> [Numérique discrétisée] </I> &nbsp</td><td align="center">En tant que variable continue, celle-ci vaut EPI_SOUMIS/Ep.*100 
+<br>Les modalités sont les suivantes : <b>Moins de 25%, Entre 25 et 50%, Entre 50% et 75%, Plus de 75%.</b>
+<br>Les personnages étant soumis moins de cinq épisodes se voient attribuer la modalité <b>NC</b> (un personnage n'apparaissant qu'une fois à l'écran serait considéré comme régulier.</tr>
+<tr><td align="center"><a id="COHORTE">Cohorte </a><a href="#stat_COHORTE"> COHORTE </a>  <I> [Textuelle] </I> &nbsp</td><td align="center">
+A quel moment de la série le personnage est-il apparu pour la première fois ? <br> <b>Trois premiers épisodes de la saison une, Trois premiers épisodes
+de la saison deux ou trois, Autres des saisons une à trois, Saisons quatre à sept</b><br>Dans un autre <a href="dossier.html">dossier</a> nous avons montrer
+que la cohorte 1 est celle de personnages centraux et la cohorte 4 celle de personnages mineurs.</td></tr>
+<tr><td align="center"><a id="e21">Statut </a>STATUT <I> [Dichotomique] </I> &nbsp</td><td align="center"><b>Vivant/Mort</b> : Sont considérés comme morts les personnages qui meurent à l’écran ou dont on nous rapporte la mort ainsi que ceux condamnés (ex : <a href="http://gameofthrones.wikia.com/wiki/Unella">Septa Unella<span><img class='img_mini' src='images_site/portraits/Unella.jpg' alt='Photo du personnage' id='img_mini'/><br>proba décès :<br> 68%</span></a>, détenue et torturée par <a href="http://gameofthrones.wikia.com/wiki/Cersei_Lannister">Cersei Lannister<span><img class='img_mini' src='images_site/portraits/Cersei_Lannister.jpg' alt='Photo du personnage' id='img_mini'/><br>proba décès :<br> 11%</span></a>). Sont considérés comme vivants les personnages au statut incertain qui n’apparaissent plus à l’écran après une scène de bataille (ex : <a href="http://gameofthrones.wikia.com/wiki/Beric_Dondarrion">Beric Dondarrion<span><img class='img_mini' src='images_site/portraits/Beric_Dondarrion.jpg' alt='Photo du personnage' id='img_mini'/><br>proba décès :<br> 89%</span></a>).</td></tr>
+<tr><td align="center">Cause de mortalité CAUSEMORT  <I> [Textuelle] </I> &nbsp</td><td align="center"><b>Animal</b> (qu’il soit sauvage ou domestiqué, qu’il le fasse sur ordre de son maître ou non),<b>Mains nues, Arme tranchante</b> (poignard, épé …), <b>Arme non tranchante</b> (bâtons, masses …), </b>Arme à distance</b> (lances, flèches, carreaux …), <b>Autre arme</b> (fouets, chaînes …), <b>Brulé.e vif.ve, Ecorché.e vif.ve, Pendaison, Empoisonnement, Naturelle, Autre, Inconnue</b></td></tr>
+<tr><td align="center">CIM CIM  <I> [Textuelle] </I> &nbsp</td><td align="center">Cause de la mort codée selon la <a href="http://www.who.int/substance_abuse/terminology/icd_10/fr/">classification internationale des maladies de l’
+ OMS</a>. <b>IV</b> (Maladies endocriniennes, nutritionnelles et métaboliques), <b>XVIII</b> (Symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs), <b>XIX</b> (Lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes), <b>XX</b> (Causes externes de morbidité et de mortalité), <b>Inconnue</b> (notamment pour les morts hors écran), <b>NC</b></td></tr>
+<tr><td align="center">Lieu de mort LIEUMORT  <I> [Textuelle] </I> &nbsp</td><td align="center">Lieu de mort détaillé pour cartographie</td></tr>
+<tr><td align="center">Contexte de mort CONTMORT  <I> [Textuelle] </I> &nbsp</td><td align="center"><b>Assassinat</b> (y compris lorsque la mort de la victime est entraînée par une tierce personne pour abréger les souffrances), <b>Bataille, Combat régulier</b> (par exemple duel judiciaire ou tournoi), <b>Exécution</b> (faisant suite à une condamnation ou à l’entorse d’un règlement), <b>Suicide</b> (y compris lorsque la mort est entraînée par un tierce personne qui est l’outil du suicide ou d’un plan suicidaire : par exemple <a href="http://gameofthrones.wikia.com/wiki/Qhorin">Qhorin<span><img class='img_mini' src='images_site/portraits/Qhorin.jpg' alt='Photo du personnage' id='img_mini'/><br>proba décès :<br> 94%</span></a> tué par <a href="http://gameofthrones.wikia.com/wiki/Jon_Snow">Jon Snow<span><img class='img_mini' src='images_site/portraits/Jon_Snow.jpg' alt='Photo du personnage' id='img_mini'/><br>proba décès :<br> 2%</span></a> après avoir établi un plan suicidaire pour que Jon gagne la confiance des Sauvageons), NC</td></tr>
+</table>
+
+<h1 ><a id="dico_stat" >Dictionnaire des statistiques descriptives et courbes de survie</a></h1>
+
+<hr>
+<a id="stat_TYPE"><h2 align="center">Statistiques descriptives de la variable TYPE<br>
+<a href="#TYPE">Retourner à la section du dictionnaire de la variable TYPE</a></h2></a>
+<table id='tableau_dico_var' border=6 align='center'><td bgcolor='#7E8382'><b>TYPE</b></td><td align='center' bgcolor='#7E8382'><b>Décès</B></td><td align='center' bgcolor='#7E8382'><b>Survivants</B></td><td align='center' bgcolor='#7E8382'><b>Effectifs</B></td><td align='center' bgcolor='#7E8382'><b>Rapport de mortalité</td>
+<tr><td bgcolor='#c4bebe'>Animal</td><td align="center">50% (7)</td><td align="center">50% (7)</td><td align="center">14</td><td align='center' bgcolor='#DCCED2'>0,97</td></tr>
+<tr><td bgcolor='#c4bebe'>Humain</td><td align="center">52% (193)</td><td align="center">48% (179)</td><td align="center">372</td><td align='center' bgcolor='#DCCED2'>1,01</td></tr>
+<tr><td bgcolor='#c4bebe'>Non humain</td><td align="center">42% (5)</td><td align="center">58% (7)</td><td align="center">12</td><td align='center' bgcolor='#89afdd'>0,81</td></tr>
+<tr><td bgcolor='#7E8382'><b>Total</b></td><td align="center" bgcolor="#7E8382"><b>205</b></td><td align="center" bgcolor="#7E8382"><b>193</b></td><td align="center" bgcolor="#7E8382"><b>398</b></td><td align="center" bgcolor="#7E8382"><b>1,00</b></td></tr></table>
+<p id="t_centre">Effectifs trop faibles pour les animaux et les non humaines pour faire des courbes de survie</p>
+
+<hr>
+<a id="stat_SEXE"><h2 align="center">Statistiques descriptives de la variable SEXE<br>
+<a href="#SEXE">Retourner à la section du dictionnaire de la variable SEXE</a></h2></a>
+<table id='tableau_dico_var' border=6 align='center'><td bgcolor='#7E8382'><b>SEXE</b></td><td align='center' bgcolor='#7E8382'><b>Décès</B></td><td align='center' bgcolor='#7E8382'><b>Survivants</B></td><td align='center' bgcolor='#7E8382'><b>Effectifs</B></td><td align='center' bgcolor='#7E8382'><b>Rapport de mortalité</td>
+<tr><td bgcolor='#c4bebe'>Femme</td><td align="center">38% (38)</td><td align="center">62% (62)</td><td align="center">100</td><td align='center' bgcolor='#89afdd'>0,74</td></tr>
+<tr><td bgcolor='#c4bebe'>Homme</td><td align="center">56% (167)</td><td align="center">44% (131)</td><td align="center">298</td><td align='center' bgcolor='#d9adab'>1,09</td></tr>
+<tr><td bgcolor='#7E8382'><b>Total</b></td><td align="center" bgcolor="#7E8382"><b>205</b></td><td align="center" bgcolor="#7E8382"><b>193</b></td><td align="center" bgcolor="#7E8382"><b>398</b></td><td align="center" bgcolor="#7E8382"><b>1,00</b></td></tr></table>
+<br><figure>
+	<img class="lifetest"src="images_site/life_SEXE.jpg" alt="When demographers play the game of thrones" id="lifetest"/>
+	<figcaption>
+	<p id="t_justifie">	Les hommes connaissent au début de leur survie dans la série une mortalité extrême (première heure) par rapport aux femmes.
+		Ces dernières sont toute fois plus exposées par la suite (voir article <a href="r_femme.html">"La place des femmes"</a>).
+		Ainsi, d'après les <a href="methodo-duree.html#test_W_LR">statistiques du Log-Rang et de Wilcoxon</a> tendent à confirmer que ces différences existent (seuil de risque à 1,9% et 2,7%).<br>
+		Si vous souhaitez en savoir plus sur la lecture des courbes de survie (exemples et méthodologie général), 
+		<a href="methodo-duree.html">cliquez ici</a>.</p>
+	</figcaption>
+</figure>
+
+<hr>
+<a id="stat_AGE11"><h2 align="center">Statistiques descriptives de la variable AGE11<br>
+<a href="#AGE11">Retourner à la section du dictionnaire de la variable AGE11</a></h2></a>
+<table id='tableau_dico_var' border=6 align='center'><td bgcolor='#7E8382'><b>AGE11</b></td><td align='center' bgcolor='#7E8382'><b>Décès</B></td><td align='center' bgcolor='#7E8382'><b>Survivants</B></td><td align='center' bgcolor='#7E8382'><b>Effectifs</B></td><td align='center' bgcolor='#7E8382'><b>Rapport de mortalité</td>
+<tr><td bgcolor='#c4bebe'>Moins de 10 ans</td><td align="center">24% (4)</td><td align="center">76% (13)</td><td align="center">17</td><td align='center' bgcolor='#77a2d7'>0,46</td></tr>
+<tr><td bgcolor='#c4bebe'>10-15 ans</td><td align="center">50% (15)</td><td align="center">50% (15)</td><td align="center">30</td><td align='center' bgcolor='#DCCED2'>0,97</td></tr>
+<tr><td bgcolor='#c4bebe'>15-20 ans</td><td align="center">50% (13)</td><td align="center">50% (13)</td><td align="center">26</td><td align='center' bgcolor='#DCCED2'>0,97</td></tr>
+<tr><td bgcolor='#c4bebe'>20-25 ans</td><td align="center">50% (14)</td><td align="center">50% (14)</td><td align="center">28</td><td align='center' bgcolor='#DCCED2'>0,97</td></tr>
+<tr><td bgcolor='#c4bebe'>25-30 ans</td><td align="center">44% (17)</td><td align="center">56% (22)</td><td align="center">39</td><td align='center' bgcolor='#aec4df'>0,85</td></tr>
+<tr><td bgcolor='#c4bebe'>30-35 ans</td><td align="center">59% (51)</td><td align="center">41% (36)</td><td align="center">87</td><td align='center' bgcolor='#d9adab'>1,14</td></tr>
+<tr><td bgcolor='#c4bebe'>35-40 ans</td><td align="center">53% (8)</td><td align="center">47% (7)</td><td align="center">15</td><td align='center' bgcolor='#DCCED2'>1,04</td></tr>
+<tr><td bgcolor='#c4bebe'>40-45 ans</td><td align="center">53% (32)</td><td align="center">47% (28)</td><td align="center">60</td><td align='center' bgcolor='#DCCED2'>1,04</td></tr>
+<tr><td bgcolor='#c4bebe'>45-60 ans</td><td align="center">59% (23)</td><td align="center">41% (16)</td><td align="center">39</td><td align='center' bgcolor='#d9adab'>1,14</td></tr>
+<tr><td bgcolor='#c4bebe'>Plus de 60 ans</td><td align="center">52% (16)</td><td align="center">48% (15)</td><td align="center">31</td><td align='center' bgcolor='#DCCED2'>1,00</td></tr>
+<tr><td bgcolor='#c4bebe'>NC</td><td align="center">46% (12)</td><td align="center">54% (14)</td><td align="center">26</td><td align='center' bgcolor='#aec4df'>0,90</td></tr>
+<tr><td bgcolor='#7E8382'><b>Total</b></td><td align="center" bgcolor="#7E8382"><b>205</b></td><td align="center" bgcolor="#7E8382"><b>193</b></td><td align="center" bgcolor="#7E8382"><b>398</b></td><td align="center" bgcolor="#7E8382"><b>1,00</b></td></tr></table>
+<br><figure>
+	<img class="lifetest"src="images_site/life_AGE11.jpg" alt="When demographers play the game of thrones" id="lifetest"/>
+	<figcaption>
+	<p id="t_justifie">	Les jeunes personnages (moins de 20 ans) semblent survivre plus longtemps que 
+	les autres. Ainsi, d'après les <a href="methodo-duree.html#test_W_LR">statistiques du Log-Rang et de Wilcoxon</a> tendent à confirmer que ces différences existent 
+	(seuil de risque à 2% et 0,3%). Le risque à prendre pour affirmer qu'il existe une différence entre les deux courbes 
+	de survie entre hommes et femmes est plus faible selon le test de Wilcoxon, ce qui signifie bien que le différentiel 
+	de mortalité est surtout présent en début de survie.<br>
+	Si vous souhaitez en savoir plus sur la lecture des courbes de survie (exemples et méthodologie général), 
+	<a href="methodo-duree.html">cliquez ici</a>.</p>
+	</figcaption>
+</figure>
+
+<hr>
+<a id="stat_LIEUNAIS"><h2 align="center">Statistiques descriptives de la variable LIEUNAIS<br>
+<a href="#LIEUNAIS">Retourner à la section du dictionnaire de la variable LIEUNAIS</a></h2></a>
+<table id='tableau_dico_var' border=6 align='center'><td bgcolor='#7E8382'><b>LIEUNAIS</b></td><td align='center' bgcolor='#7E8382'><b>Décès</B></td><td align='center' bgcolor='#7E8382'><b>Survivants</B></td><td align='center' bgcolor='#7E8382'><b>Effectifs</B></td><td align='center' bgcolor='#7E8382'><b>Rapport de mortalité</td>
+<tr><td bgcolor='#c4bebe'>Ailleurs</td><td align="center">50% (80)</td><td align="center">50% (79)</td><td align="center">159</td><td align='center' bgcolor='#DCCED2'>0,98</td></tr>
+<tr><td bgcolor='#c4bebe'>Braavos</td><td align="center">25% (5)</td><td align="center">75% (15)</td><td align="center">20</td><td align='center' bgcolor='#77a2d7'>0,49</td></tr>
+<tr><td bgcolor='#c4bebe'>Les Jumeaux</td><td align="center">32% (6)</td><td align="center">68% (13)</td><td align="center">19</td><td align='center' bgcolor='#89afdd'>0,61</td></tr>
+<tr><td bgcolor='#c4bebe'>Mer des Dothrakis</td><td align="center">61% (14)</td><td align="center">39% (9)</td><td align="center">23</td><td align='center' bgcolor='#d67e79'>1,18</td></tr>
+<tr><td bgcolor='#c4bebe'>Nord du Mur</td><td align="center">59% (10)</td><td align="center">41% (7)</td><td align="center">17</td><td align='center' bgcolor='#d9adab'>1,14</td></tr>
+<tr><td bgcolor='#c4bebe'>Port Réal</td><td align="center">55% (11)</td><td align="center">45% (9)</td><td align="center">20</td><td align='center' bgcolor='#d9adab'>1,07</td></tr>
+<tr><td bgcolor='#c4bebe'>Winterfell</td><td align="center">48% (14)</td><td align="center">52% (15)</td><td align="center">29</td><td align='center' bgcolor='#aec4df'>0,94</td></tr>
+<tr><td bgcolor='#c4bebe'>Inconnus</td><td align="center">59% (65)</td><td align="center">41% (46)</td><td align="center">111</td><td align='center' bgcolor='#d9adab'>1,14</td></tr>
+<tr><td bgcolor='#7E8382'><b>Total</b></td><td align="center" bgcolor="#7E8382"><b>205</b></td><td align="center" bgcolor="#7E8382"><b>193</b></td><td align="center" bgcolor="#7E8382"><b>398</b></td><td align="center" bgcolor="#7E8382"><b>1,00</b></td></tr></table>
+<p id="t_centre">Effectifs trop faibles pour certains lieux de naissance pour faire des courbes de survie.</p>
+
+<hr>
+<a id="stat_CULT"><h2 align="center">Statistiques descriptives de la variable CULT<br>
+<a href="#CULT">Retourner à la section du dictionnaire de la variable CULT</a></h2></a>
+<table id='tableau_dico_var' border=6 align='center'><td bgcolor='#7E8382'><b>CULT</b></td><td align='center' bgcolor='#7E8382'><b>Décès</B></td><td align='center' bgcolor='#7E8382'><b>Survivants</B></td><td align='center' bgcolor='#7E8382'><b>Effectifs</B></td><td align='center' bgcolor='#7E8382'><b>Rapport de mortalité</td>
+<tr><td bgcolor='#c4bebe'>Andale</td><td align="center">48% (46)</td><td align="center">52% (49)</td><td align="center">95</td><td align='center' bgcolor='#aec4df'>0,94</td></tr>
+<tr><td bgcolor='#c4bebe'>Autre Essos</td><td align="center">54% (7)</td><td align="center">46% (6)</td><td align="center">13</td><td align='center' bgcolor='#d9adab'>1,05</td></tr>
+<tr><td bgcolor='#c4bebe'>Cités libres</td><td align="center">31% (9)</td><td align="center">69% (20)</td><td align="center">29</td><td align='center' bgcolor='#89afdd'>0,60</td></tr>
+<tr><td bgcolor='#c4bebe'>Dornienne</td><td align="center">67% (8)</td><td align="center">33% (4)</td><td align="center">12</td><td align='center' bgcolor='#d67e79'>1,29</td></tr>
+<tr><td bgcolor='#c4bebe'>Fernée</td><td align="center">69% (11)</td><td align="center">31% (5)</td><td align="center">16</td><td align='center' bgcolor='#d67e79'>1,33</td></tr>
+<tr><td bgcolor='#c4bebe'>Ghiscarienne</td><td align="center">50% (12)</td><td align="center">50% (12)</td><td align="center">24</td><td align='center' bgcolor='#DCCED2'>0,97</td></tr>
+<tr><td bgcolor='#c4bebe'>Nordienne</td><td align="center">57% (34)</td><td align="center">43% (26)</td><td align="center">60</td><td align='center' bgcolor='#d9adab'>1,10</td></tr>
+<tr><td bgcolor='#c4bebe'>Ouest de Westeros</td><td align="center">57% (16)</td><td align="center">43% (12)</td><td align="center">28</td><td align='center' bgcolor='#d9adab'>1,11</td></tr>
+<tr><td bgcolor='#c4bebe'>Plaine d'Essos</td><td align="center">60% (12)</td><td align="center">40% (8)</td><td align="center">20</td><td align='center' bgcolor='#d67e79'>1,16</td></tr>
+<tr><td bgcolor='#c4bebe'>Primitive</td><td align="center">56% (15)</td><td align="center">44% (12)</td><td align="center">27</td><td align='center' bgcolor='#d9adab'>1,08</td></tr>
+<tr><td bgcolor='#c4bebe'>Région des Rivières</td><td align="center">46% (12)</td><td align="center">54% (14)</td><td align="center">26</td><td align='center' bgcolor='#aec4df'>0,90</td></tr>
+<tr><td bgcolor='#c4bebe'>Terre de la Couronne</td><td align="center">47% (14)</td><td align="center">53% (16)</td><td align="center">30</td><td align='center' bgcolor='#aec4df'>0,91</td></tr>
+<tr><td bgcolor='#c4bebe'>NC</td><td align="center">50% (9)</td><td align="center">50% (9)</td><td align="center">18</td><td align='center' bgcolor='#DCCED2'>0,97</td></tr>
+<tr><td bgcolor='#7E8382'><b>Total</b></td><td align="center" bgcolor="#7E8382"><b>205</b></td><td align="center" bgcolor="#7E8382"><b>193</b></td><td align="center" bgcolor="#7E8382"><b>398</b></td><td align="center" bgcolor="#7E8382"><b>1,00</b></td></tr></table>
+<p id="t_centre">Effectifs trop faibles pour certaines cultures pour faire des courbes de survie.</p>
+
+<hr>
+<a id="stat_RELIGION"><h2 align="center">Statistiques descriptives de la variable RELIGION<br>
+<a href="#RELIGION">Retourner à la section du dictionnaire de la variable RELIGION</a></h2></a>
+<table id='tableau_dico_var' border=6 align='center'><td bgcolor='#7E8382'><b>RELIGION</b></td><td align='center' bgcolor='#7E8382'><b>Décès</B></td><td align='center' bgcolor='#7E8382'><b>Survivants</B></td><td align='center' bgcolor='#7E8382'><b>Effectifs</B></td><td align='center' bgcolor='#7E8382'><b>Rapport de mortalité</td>
+<tr><td bgcolor='#c4bebe'>Les Sept</td><td align="center">47% (66)</td><td align="center">53% (74)</td><td align="center">140</td><td align='center' bgcolor='#aec4df'>0,92</td></tr>
+<tr><td bgcolor='#c4bebe'>Religion inconnue</td><td align="center">51% (22)</td><td align="center">49% (21)</td><td align="center">43</td><td align='center' bgcolor='#DCCED2'>0,99</td></tr>
+<tr><td bgcolor='#c4bebe'>Anciens Dieux</td><td align="center">59% (46)</td><td align="center">41% (32)</td><td align="center">78</td><td align='center' bgcolor='#d9adab'>1,14</td></tr>
+<tr><td bgcolor='#c4bebe'>R'hllor</td><td align="center">53% (9)</td><td align="center">47% (8)</td><td align="center">17</td><td align='center' bgcolor='#DCCED2'>1,03</td></tr>
+<tr><td bgcolor='#c4bebe'>Les Grands</td><td align="center">60% (12)</td><td align="center">40% (8)</td><td align="center">20</td><td align='center' bgcolor='#d67e79'>1,16</td></tr>
+<tr><td bgcolor='#c4bebe'>Dieu Noyé</td><td align="center">69% (11)</td><td align="center">31% (5)</td><td align="center">16</td><td align='center' bgcolor='#d67e79'>1,33</td></tr>
+<tr><td bgcolor='#c4bebe'>Aucune pratique religieuse</td><td align="center">41% (18)</td><td align="center">59% (26)</td><td align="center">44</td><td align='center' bgcolor='#89afdd'>0,79</td></tr>
+<tr><td bgcolor='#c4bebe'>Autre</td><td align="center">55% (12)</td><td align="center">45% (10)</td><td align="center">22</td><td align='center' bgcolor='#d9adab'>1,06</td></tr>
+<tr><td bgcolor='#c4bebe'>NC</td><td align="center">50% (9)</td><td align="center">50% (9)</td><td align="center">18</td><td align='center' bgcolor='#DCCED2'>0,97</td></tr>
+<tr><td bgcolor='#7E8382'><b>Total</b></td><td align="center" bgcolor="#7E8382"><b>205</b></td><td align="center" bgcolor="#7E8382"><b>193</b></td><td align="center" bgcolor="#7E8382"><b>398</b></td><td align="center" bgcolor="#7E8382"><b>1,00</b></td></tr></table>
+<p id="t_centre">Effectifs trop faibles pour certaines religions pour faire des courbes de survie.</p>
+
+<hr>
+<a id="stat_RESPRINC"><h2 align="center">Statistiques descriptives de la variable RESPRINC<br>
+<a href="#RESPRINC">Retourner à la section du dictionnaire de la variable RESPRINC</a></h2></a>
+<table id='tableau_dico_var' border=6 align='center'><td bgcolor='#7E8382'><b>RESPRINC</b></td><td align='center' bgcolor='#7E8382'><b>Décès</B></td><td align='center' bgcolor='#7E8382'><b>Survivants</B></td><td align='center' bgcolor='#7E8382'><b>Effectifs</B></td><td align='center' bgcolor='#7E8382'><b>Rapport de mortalité</td>
+<tr><td bgcolor='#c4bebe'>Ailleurs</td><td align="center">67% (58)</td><td align="center">33% (29)</td><td align="center">87</td><td align='center' bgcolor='#d67e79'>1,29</td></tr>
+<tr><td bgcolor='#c4bebe'>Braavos</td><td align="center">17% (3)</td><td align="center">83% (15)</td><td align="center">18</td><td align='center' bgcolor='#6d9dd7'>0,32</td></tr>
+<tr><td bgcolor='#c4bebe'>Chateaunoir</td><td align="center">71% (24)</td><td align="center">29% (10)</td><td align="center">34</td><td align='center' bgcolor='#d55851'>1,37</td></tr>
+<tr><td bgcolor='#c4bebe'>Eyrié</td><td align="center">17% (2)</td><td align="center">83% (10)</td><td align="center">12</td><td align='center' bgcolor='#6d9dd7'>0,32</td></tr>
+<tr><td bgcolor='#c4bebe'>Itinérant</td><td align="center">48% (34)</td><td align="center">52% (37)</td><td align="center">71</td><td align='center' bgcolor='#aec4df'>0,93</td></tr>
+<tr><td bgcolor='#c4bebe'>Les Jumeaux</td><td align="center">32% (7)</td><td align="center">68% (15)</td><td align="center">22</td><td align='center' bgcolor='#89afdd'>0,62</td></tr>
+<tr><td bgcolor='#c4bebe'>Meereen</td><td align="center">38% (5)</td><td align="center">62% (8)</td><td align="center">13</td><td align='center' bgcolor='#89afdd'>0,75</td></tr>
+<tr><td bgcolor='#c4bebe'>Nord du Mur</td><td align="center">71% (12)</td><td align="center">29% (5)</td><td align="center">17</td><td align='center' bgcolor='#d55851'>1,37</td></tr>
+<tr><td bgcolor='#c4bebe'>Port Réal</td><td align="center">43% (30)</td><td align="center">57% (39)</td><td align="center">69</td><td align='center' bgcolor='#89afdd'>0,84</td></tr>
+<tr><td bgcolor='#c4bebe'>Winterfell</td><td align="center">56% (20)</td><td align="center">44% (16)</td><td align="center">36</td><td align='center' bgcolor='#d9adab'>1,08</td></tr>
+<tr><td bgcolor='#c4bebe'>Inconnue</td><td align="center">53% (10)</td><td align="center">47% (9)</td><td align="center">19</td><td align='center' bgcolor='#DCCED2'>1,02</td></tr>
+<tr><td bgcolor='#7E8382'><b>Total</b></td><td align="center" bgcolor="#7E8382"><b>205</b></td><td align="center" bgcolor="#7E8382"><b>193</b></td><td align="center" bgcolor="#7E8382"><b>398</b></td><td align="center" bgcolor="#7E8382"><b>1,00</b></td></tr></table>
+<p id="t_centre">Effectifs trop faibles pour certaines résidences pour faire des courbes de survie.</p>
+
+<hr>
+<a id="stat_STATMAR"><h2 align="center">Statistiques descriptives de la variable STATMAR<br>
+<a href="#STATMAR">Retourner à la section du dictionnaire de la variable STATMAR</a></h2></a>
+<table id='tableau_dico_var' border=6 align='center'><td bgcolor='#7E8382'><b>STATMAR</b></td><td align='center' bgcolor='#7E8382'><b>Décès</B></td><td align='center' bgcolor='#7E8382'><b>Survivants</B></td><td align='center' bgcolor='#7E8382'><b>Effectifs</B></td><td align='center' bgcolor='#7E8382'><b>Rapport de mortalité</td>
+<tr><td bgcolor='#c4bebe'>1.Marié.e</td><td align="center">68% (30)</td><td align="center">32% (14)</td><td align="center">44</td><td align='center' bgcolor='#d67e79'>1,32</td></tr>
+<tr><td bgcolor='#c4bebe'>2.Célibataire et Veuf</td><td align="center">49% (121)</td><td align="center">51% (125)</td><td align="center">246</td><td align='center' bgcolor='#DCCED2'>0,96</td></tr>
+<tr><td bgcolor='#c4bebe'>3.Voeux de chasteté</td><td align="center">63% (39)</td><td align="center">37% (23)</td><td align="center">62</td><td align='center' bgcolor='#d67e79'>1,22</td></tr>
+<tr><td bgcolor='#c4bebe'>Inconnu ou NC</td><td align="center">33% (15)</td><td align="center">67% (31)</td><td align="center">46</td><td align='center' bgcolor='#89afdd'>0,63</td></tr>
+<tr><td bgcolor='#7E8382'><b>Total</b></td><td align="center" bgcolor="#7E8382"><b>205</b></td><td align="center" bgcolor="#7E8382"><b>193</b></td><td align="center" bgcolor="#7E8382"><b>398</b></td><td align="center" bgcolor="#7E8382"><b>1,00</b></td></tr></table>
+<br><figure>
+	<img class="lifetest"src="images_site/life_STATMAR.jpg" alt="When demographers play the game of thrones" id="lifetest"/>
+	<figcaption>
+	<p id="t_justifie">	Les différences observées ici sont non significatives 
+	(d'après les <a href="methodo-duree.html#test_W_LR">statistiques du Log-Rang et de Wilcoxon</a>). <br>
+	Si vous souhaitez en savoir plus sur la lecture des courbes de survie (exemples et méthodologie général), 
+	<a href="methodo-duree.html">cliquez ici</a>.</p>
+	</figcaption>
+</figure>
+
+<hr>
+<a id="stat_ENF"><h2 align="center">Statistiques descriptives de la variable ENF<br>
+<a href="#ENF">Retourner à la section du dictionnaire de la variable ENF</a></h2></a>
+<table id='tableau_dico_var' border=6 align='center'><td bgcolor='#7E8382'><b>ENF</b></td><td align='center' bgcolor='#7E8382'><b>Décès</B></td><td align='center' bgcolor='#7E8382'><b>Survivants</B></td><td align='center' bgcolor='#7E8382'><b>Effectifs</B></td><td align='center' bgcolor='#7E8382'><b>Rapport de mortalité</td>
+<tr><td bgcolor='#c4bebe'>1</td><td align="center">62% (33)</td><td align="center">38% (20)</td><td align="center">53</td><td align='center' bgcolor='#d67e79'>1,21</td></tr>
+<tr><td bgcolor='#c4bebe'>NSP</td><td align="center">49% (93)</td><td align="center">51% (95)</td><td align="center">188</td><td align='center' bgcolor='#DCCED2'>0,96</td></tr>
+<tr><td bgcolor='#7E8382'><b>Total</b></td><td align="center" bgcolor="#7E8382"><b>205</b></td><td align="center" bgcolor="#7E8382"><b>193</b></td><td align="center" bgcolor="#7E8382"><b>398</b></td><td align="center" bgcolor="#7E8382"><b>1,00</b></td></tr></table>
+<br><figure>
+	<img class="lifetest"src="images_site/life_ENF.jpg" alt="When demographers play the game of thrones" id="lifetest"/>
+	<figcaption>
+	<p id="t_justifie">	Les différences observées ici sont non significatives 
+	(d'après les <a href="methodo-duree.html#test_W_LR">statistiques du Log-Rang et de Wilcoxon</a>). <br>
+	Si vous souhaitez en savoir plus sur la lecture des courbes de survie (exemples et méthodologie général), 
+	<a href="methodo-duree.html">cliquez ici</a>.</p>
+	</figcaption>
+</figure>
+
+<a id="stat_CORP"><h2 align="center">Statistiques descriptives de la variable CORP<br>
+<a href="#CORP">Retourner à la section du dictionnaire de la variable CORP</a></h2></a>
+<table id='tableau_dico_var' border=6 align='center'><td bgcolor='#7E8382'><b>CORP</b></td><td align='center' bgcolor='#7E8382'><b>Décès</B></td><td align='center' bgcolor='#7E8382'><b>Survivants</B></td><td align='center' bgcolor='#7E8382'><b>Effectifs</B></td><td align='center' bgcolor='#7E8382'><b>Rapport de mortalité</td>
+<tr><td bgcolor='#c4bebe'>Moins que la moyenne</td><td align="center">43% (23)</td><td align="center">57% (30)</td><td align="center">53</td><td align='center' bgcolor='#89afdd'>0,84</td></tr>
+<tr><td bgcolor='#c4bebe'>Normale</td><td align="center">49% (110)</td><td align="center">51% (113)</td><td align="center">223</td><td align='center' bgcolor='#DCCED2'>0,96</td></tr>
+<tr><td bgcolor='#c4bebe'>Plus que la moyenne</td><td align="center">59% (39)</td><td align="center">41% (27)</td><td align="center">66</td><td align='center' bgcolor='#d67e79'>1,15</td></tr>
+<tr><td bgcolor='#c4bebe'>Musclé</td><td align="center">61% (23)</td><td align="center">39% (15)</td><td align="center">38</td><td align='center' bgcolor='#d67e79'>1,18</td></tr>
+<tr><td bgcolor='#c4bebe'>NC</td><td align="center">56% (10)</td><td align="center">44% (8)</td><td align="center">18</td><td align='center' bgcolor='#d9adab'>1,08</td></tr>
+<tr><td bgcolor='#7E8382'><b>Total</b></td><td align="center" bgcolor="#7E8382"><b>205</b></td><td align="center" bgcolor="#7E8382"><b>193</b></td><td align="center" bgcolor="#7E8382"><b>398</b></td><td align="center" bgcolor="#7E8382"><b>1,00</b></td></tr></table>
+<br><figure>
+	<img class="lifetest"src="images_site/life_CORP.jpg" alt="When demographers play the game of thrones" id="lifetest"/>
+	<figcaption>
+	<p id="t_justifie">	Les différences observées ici sont non significatives 
+	(d'après les <a href="methodo-duree.html#test_W_LR">statistiques du Log-Rang et de Wilcoxon</a>). <br>
+	Si vous souhaitez en savoir plus sur la lecture des courbes de survie (exemples et méthodologie général), 
+	<a href="methodo-duree.html">cliquez ici</a>.</p>
+	</figcaption>
+</figure>
+
+<hr>
+<a id="stat_HAND"><h2 align="center">Statistiques descriptives de la variable HAND<br>
+<a href="#HAND">Retourner à la section du dictionnaire de la variable HAND</a></h2></a>
+<table id='tableau_dico_var' border=6 align='center'><td bgcolor='#7E8382'><b>HAND</b></td><td align='center' bgcolor='#7E8382'><b>Décès</B></td><td align='center' bgcolor='#7E8382'><b>Survivants</B></td><td align='center' bgcolor='#7E8382'><b>Effectifs</B></td><td align='center' bgcolor='#7E8382'><b>Rapport de mortalité</td>
+<tr><td bgcolor='#c4bebe'>Aucun handicap</td><td align="center">52% (189)</td><td align="center">48% (173)</td><td align="center">362</td><td align='center' bgcolor='#DCCED2'>1,01</td></tr>
+<tr><td bgcolor='#c4bebe'>A un handicap (hors batard)</td><td align="center">30% (7)</td><td align="center">70% (16)</td><td align="center">23</td><td align='center' bgcolor='#89afdd'>0,59</td></tr>
+<tr><td bgcolor='#c4bebe'>Batard</td><td align="center">69% (9)</td><td align="center">31% (4)</td><td align="center">13</td><td align='center' bgcolor='#d67e79'>1,34</td></tr>
+<tr><td bgcolor='#7E8382'><b>Total</b></td><td align="center" bgcolor="#7E8382"><b>205</b></td><td align="center" bgcolor="#7E8382"><b>193</b></td><td align="center" bgcolor="#7E8382"><b>398</b></td><td align="center" bgcolor="#7E8382"><b>1,00</b></td></tr></table>
+<br><figure>
+	<img class="lifetest"src="images_site/life_HAND.jpg" alt="When demographers play the game of thrones" id="lifetest"/>
+	<figcaption>
+	<p id="t_justifie">	Les personnages dont nous avons recensé un handicap survivent significativement plus longtemps et en 
+	plus grand nombre que les autres. Le risque pour affirmer cette différence est de 0,4% et 5,2% – d'après les 
+	<a href="methodo-duree.html#test_W_LR">statistiques du Log-Rang et de Wilcoxon</a>. <br>
+	Si vous souhaitez en savoir plus sur la lecture des courbes de survie (exemples et méthodologie général), 
+	<a href="methodo-duree.html">cliquez ici</a>.</p>
+	</figcaption>
+</figure>
+
+<hr>
+<a id="stat_CLASSNU"><h2 align="center">Statistiques descriptives de la variable CLASSNU<br>
+<a href="#CLASSNU">Retourner à la section du dictionnaire de la variable CLASSNU</a></h2></a>
+<table id='tableau_dico_var' border=6 align='center'><td bgcolor='#7E8382'><b>CLASSE_NU</b></td><td align='center' bgcolor='#7E8382'><b>Décès</B></td><td align='center' bgcolor='#7E8382'><b>Survivants</B></td><td align='center' bgcolor='#7E8382'><b>Effectifs</B></td><td align='center' bgcolor='#7E8382'><b>Rapport de mortalité</td>
+<tr><td bgcolor='#c4bebe'>Score nul ; n'apparaît pas nu</td><td align="center">52% (171)</td><td align="center">48% (155)</td><td align="center">326</td><td align='center' bgcolor='#DCCED2'>1,02</td></tr>
+<tr><td bgcolor='#c4bebe'>Score de 1 à 8</td><td align="center">53% (23)</td><td align="center">47% (20)</td><td align="center">43</td><td align='center' bgcolor='#DCCED2'>1,04</td></tr>
+<tr><td bgcolor='#c4bebe'>Score supérieur à 8</td><td align="center">23% (3)</td><td align="center">77% (10)</td><td align="center">13</td><td align='center' bgcolor='#77a2d7'>0,45</td></tr>
+<tr><td bgcolor='#c4bebe'>NC</td><td align="center">50% (8)</td><td align="center">50% (8)</td><td align="center">16</td><td align='center' bgcolor='#DCCED2'>0,97</td></tr>
+<tr><td bgcolor='#7E8382'><b>Total</b></td><td align="center" bgcolor="#7E8382"><b>205</b></td><td align="center" bgcolor="#7E8382"><b>193</b></td><td align="center" bgcolor="#7E8382"><b>398</b></td><td align="center" bgcolor="#7E8382"><b>1,00</b></td></tr></table>
+<br><figure>
+	<img class="lifetest"src="images_site/life_NU.jpg" alt="When demographers play the game of thrones" id="lifetest"/>
+	<figcaption>
+		Ceux qui sont apparu nu au moins une fois vivent en moyenne plus longtemps (car ils ont eu le temps d'apparaître nu) ; 
+		analyse impossible car il s'agit d'une <a href="methodo-duree.html#titre3">courbe de survie prédéterminée</a>. <br>
+		Seuils inférieurs à 0,01% (d'après les <a href="methodo-duree.html#test_W_LR">statistiques du Log-Rang et de Wilcoxon</a>). <br>
+		Si vous souhaitez en savoir plus sur la lecture des courbes de survie (exemples et méthodologie général), 
+		<a href="methodo-duree.html">cliquez ici</a>.</p>
+	</figcaption>
+</figure>
+
+<hr>
+<a id="stat_DEVSEX"><h2 align="center">Statistiques descriptives de la variable DEVSEX<br>
+<a href="#DEVSEX">Retourner à la section du dictionnaire de la variable DEVSEX</a></h2></a>
+<table id='tableau_dico_var' border=6 align='center'><td bgcolor='#7E8382'><b>DEVSEX</b></td><td align='center' bgcolor='#7E8382'><b>Décès</B></td><td align='center' bgcolor='#7E8382'><b>Survivants</B></td><td align='center' bgcolor='#7E8382'><b>Effectifs</B></td><td align='center' bgcolor='#7E8382'><b>Rapport de mortalité</td>
+<tr><td bgcolor='#c4bebe'>Non</td><td align="center">48% (170)</td><td align="center">52% (183)</td><td align="center">353</td><td align='center' bgcolor='#aec4df'>0,94</td></tr>
+<tr><td bgcolor='#c4bebe'>Oui</td><td align="center">78% (35)</td><td align="center">22% (10)</td><td align="center">45</td><td align='center' bgcolor='#da362d'>1,51</td></tr>
+<tr><td bgcolor='#7E8382'><b>Total</b></td><td align="center" bgcolor="#7E8382"><b>205</b></td><td align="center" bgcolor="#7E8382"><b>193</b></td><td align="center" bgcolor="#7E8382"><b>398</b></td><td align="center" bgcolor="#7E8382"><b>1,00</b></td></tr></table>
+<br><figure>
+	<img class="lifetest"src="images_site/life_DEVSEX.jpg" alt="When demographers play the game of thrones" id="lifetest"/>
+	<figcaption>
+		Les personnages ayant une déviance sexuelle meurent plus vite que les autres mais les résultats sont peu 
+		significatifs (d'après <a href="methodo-duree.html#test_W_LR">statistiques du Log-Rang et de Wilcoxon</a> - 9,9% et 22,7%). <br>
+		Si vous souhaitez en savoir plus sur la lecture des courbes de survie (exemples et méthodologie général), 
+		<a href="methodo-duree.html">cliquez ici</a>.</p>
+	</figcaption>
+</figure>
+
+<hr>
+<a id="stat_ALLEG"><h2 align="center">Statistiques descriptives de la variable ALLEG<br>
+<a href="#ALLEG">Retourner à la section du dictionnaire de la variable ALLEG</a></h2></a>
+<table id='tableau_dico_var' border=6 align='center'><td bgcolor='#7E8382'><b>ALLEG</b></td><td align='center' bgcolor='#7E8382'><b>Décès</B></td><td align='center' bgcolor='#7E8382'><b>Survivants</B></td><td align='center' bgcolor='#7E8382'><b>Effectifs</B></td><td align='center' bgcolor='#7E8382'><b>Rapport de mortalité</td>
+<tr><td bgcolor='#c4bebe'>Bolton</td><td align="center">91% (10)</td><td align="center">9% (1)</td><td align="center">11</td><td align='center' bgcolor='#d71a10'>1,76</td></tr>
+<tr><td bgcolor='#c4bebe'>Dissident-Baratheon</td><td align="center">64% (9)</td><td align="center">36% (5)</td><td align="center">14</td><td align='center' bgcolor='#d67e79'>1,25</td></tr>
+<tr><td bgcolor='#c4bebe'>Esclavagiste</td><td align="center">79% (11)</td><td align="center">21% (3)</td><td align="center">14</td><td align='center' bgcolor='#da362d'>1,53</td></tr>
+<tr><td bgcolor='#c4bebe'>Greyjoy</td><td align="center">79% (11)</td><td align="center">21% (3)</td><td align="center">14</td><td align='center' bgcolor='#da362d'>1,53</td></tr>
+<tr><td bgcolor='#c4bebe'>Peuple libre</td><td align="center">71% (12)</td><td align="center">29% (5)</td><td align="center">17</td><td align='center' bgcolor='#d55851'>1,37</td></tr>
+<tr><td bgcolor='#c4bebe'>Dothraki</td><td align="center">63% (12)</td><td align="center">37% (7)</td><td align="center">19</td><td align='center' bgcolor='#d67e79'>1,23</td></tr>
+<tr><td bgcolor='#c4bebe'>Frey</td><td align="center">30% (6)</td><td align="center">70% (14)</td><td align="center">20</td><td align='center' bgcolor='#89afdd'>0,58</td></tr>
+<tr><td bgcolor='#c4bebe'>Targaryen</td><td align="center">48% (10)</td><td align="center">52% (11)</td><td align="center">21</td><td align='center' bgcolor='#aec4df'>0,92</td></tr>
+<tr><td bgcolor='#c4bebe'>Fanatiques religieux</td><td align="center">50% (11)</td><td align="center">50% (11)</td><td align="center">22</td><td align='center' bgcolor='#DCCED2'>0,97</td></tr>
+<tr><td bgcolor='#c4bebe'>Garde de Nuit</td><td align="center">71% (22)</td><td align="center">29% (9)</td><td align="center">31</td><td align='center' bgcolor='#d55851'>1,38</td></tr>
+<tr><td bgcolor='#c4bebe'>Autre</td><td align="center">38% (13)</td><td align="center">62% (21)</td><td align="center">34</td><td align='center' bgcolor='#89afdd'>0,74</td></tr>
+<tr><td bgcolor='#c4bebe'>Aucune</td><td align="center">38% (18)</td><td align="center">63% (30)</td><td align="center">48</td><td align='center' bgcolor='#89afdd'>0,73</td></tr>
+<tr><td bgcolor='#c4bebe'>Lannister</td><td align="center">43% (27)</td><td align="center">57% (36)</td><td align="center">63</td><td align='center' bgcolor='#89afdd'>0,83</td></tr>
+<tr><td bgcolor='#c4bebe'>Stark</td><td align="center">47% (33)</td><td align="center">53% (37)</td><td align="center">70</td><td align='center' bgcolor='#aec4df'>0,92</td></tr>
+<tr><td bgcolor='#7E8382'><b>Total</b></td><td align="center" bgcolor="#7E8382"><b>205</b></td><td align="center" bgcolor="#7E8382"><b>193</b></td><td align="center" bgcolor="#7E8382"><b>398</b></td><td align="center" bgcolor="#7E8382"><b>1,00</b></td></tr></table>
+<br><figure>
+	<img class="lifetest"src="images_site/life_ALLEG.jpg" alt="When demographers play the game of thrones" id="lifetest"/>
+	<figcaption>
+		Les Lannister semblent mourir moins vite que les personnages appartenant à de petites allégeances. 
+		Le risque pour affirmer cette différence est de 4,9% et 0,9% – d'après les <a href="methodo-duree.html#test_W_LR">statistiques du Log-Rang et de Wilcoxon</a>. <br>
+		Si vous souhaitez en savoir plus sur la lecture des courbes de survie (exemples et méthodologie général), 
+		<a href="methodo-duree.html">cliquez ici</a>.</p>
+	</figcaption>
+</figure>
+
+<hr>
+<a id="stat_ENN"><h2 align="center">Statistiques descriptives de la variable ENN<br>
+<a href="#ENN">Retourner à la section du dictionnaire de la variable ENN</a></h2></a>
+<table id='tableau_dico_var' border=6 align='center'><td bgcolor='#7E8382'><b>ENN</b></td><td align='center' bgcolor='#7E8382'><b>Décès</B></td><td align='center' bgcolor='#7E8382'><b>Survivants</B></td><td align='center' bgcolor='#7E8382'><b>Effectifs</B></td><td align='center' bgcolor='#7E8382'><b>Rapport de mortalité</td>
+<tr><td bgcolor='#c4bebe'>Esclavagiste</td><td align="center">33% (5)</td><td align="center">67% (10)</td><td align="center">15</td><td align='center' bgcolor='#89afdd'>0,65</td></tr>
+<tr><td bgcolor='#c4bebe'>Garde de Nuit</td><td align="center">82% (9)</td><td align="center">18% (2)</td><td align="center">11</td><td align='center' bgcolor='#da362d'>1,59</td></tr>
+<tr><td bgcolor='#c4bebe'>Lannister</td><td align="center">60% (34)</td><td align="center">40% (23)</td><td align="center">57</td><td align='center' bgcolor='#d67e79'>1,16</td></tr>
+<tr><td bgcolor='#c4bebe'>Marcheur Blanc</td><td align="center">35% (9)</td><td align="center">65% (17)</td><td align="center">26</td><td align='center' bgcolor='#89afdd'>0,67</td></tr>
+<tr><td bgcolor='#c4bebe'>Peuple Libre</td><td align="center">70% (23)</td><td align="center">30% (10)</td><td align="center">33</td><td align='center' bgcolor='#d55851'>1,36</td></tr>
+<tr><td bgcolor='#c4bebe'>Stark</td><td align="center">71% (25)</td><td align="center">29% (10)</td><td align="center">35</td><td align='center' bgcolor='#d55851'>1,39</td></tr>
+<tr><td bgcolor='#c4bebe'>Targaryen</td><td align="center">80% (16)</td><td align="center">20% (4)</td><td align="center">20</td><td align='center' bgcolor='#da362d'>1,55</td></tr>
+<tr><td bgcolor='#c4bebe'>Aucun</td><td align="center">34% (52)</td><td align="center">66% (99)</td><td align="center">151</td><td align='center' bgcolor='#89afdd'>0,67</td></tr>
+<tr><td bgcolor='#c4bebe'>Autre</td><td align="center">64% (32)</td><td align="center">36% (18)</td><td align="center">50</td><td align='center' bgcolor='#d67e79'>1,24</td></tr>
+<tr><td bgcolor='#7E8382'><b>Total</b></td><td align="center" bgcolor="#7E8382"><b>205</b></td><td align="center" bgcolor="#7E8382"><b>193</b></td><td align="center" bgcolor="#7E8382"><b>398</b></td><td align="center" bgcolor="#7E8382"><b>1,00</b></td></tr></table>
+<br>
+
+<hr>
+<a id="stat_TRAH"><h2 align="center">Statistiques descriptives de la variable TRAH<br>
+<a href="#TRAH">Retourner à la section du dictionnaire de la variable TRAH</a></h2></a>
+<table id='tableau_dico_var' border=6 align='center'><td bgcolor='#7E8382'><b>TRAH</b></td><td align='center' bgcolor='#7E8382'><b>Décès</B></td><td align='center' bgcolor='#7E8382'><b>Survivants</B></td><td align='center' bgcolor='#7E8382'><b>Effectifs</B></td><td align='center' bgcolor='#7E8382'><b>Rapport de mortalité</td>
+<tr><td bgcolor='#c4bebe'>Non</td><td align="center">49% (162)</td><td align="center">51% (170)</td><td align="center">332</td><td align='center' bgcolor='#DCCED2'>0,95</td></tr>
+<tr><td bgcolor='#c4bebe'>Oui</td><td align="center">65% (43)</td><td align="center">35% (23)</td><td align="center">66</td><td align='center' bgcolor='#d67e79'>1,26</td></tr>
+<tr><td bgcolor='#7E8382'><b>Total</b></td><td align="center" bgcolor="#7E8382"><b>205</b></td><td align="center" bgcolor="#7E8382"><b>193</b></td><td align="center" bgcolor="#7E8382"><b>398</b></td><td align="center" bgcolor="#7E8382"><b>1,00</b></td></tr></table>
+<br><figure>
+	<img class="lifetest"src="images_site/life_TRAH.jpg" alt="When demographers play the game of thrones" id="lifetest"/>
+	<figcaption>
+		Ceux qui ont trahi au moins une fois vivent en moyenne plus longtemps (car ils ont eu le temps de trahir) ; 
+		analyse impossible car il s'agit d'une <a href="methodo-duree.html#titre3">courbe de survie prédéterminée</a>. <br>
+		Seuils inférieurs à 0,01% (d'après <a href="methodo-duree.html#test_W_LR">statistiques du Log-Rang et de Wilcoxon</a>). <br>
+		Si vous souhaitez en savoir plus sur la lecture des courbes de survie (exemples et méthodologie général), 
+		<a href="methodo-duree.html">cliquez ici</a>.</p>
+	</figcaption>
+</figure>
+
+<hr>
+<a id="stat_DISS"><h2 align="center">Statistiques descriptives de la variable DISS<br>
+<a href="#DISS">Retourner à la section du dictionnaire de la variable DISS</a></h2></a>
+<table id='tableau_dico_var' border=6 align='center'><td bgcolor='#7E8382'><b>DISS</b></td><td align='center' bgcolor='#7E8382'><b>Décès</B></td><td align='center' bgcolor='#7E8382'><b>Survivants</B></td><td align='center' bgcolor='#7E8382'><b>Effectifs</B></td><td align='center' bgcolor='#7E8382'><b>Rapport de mortalité</td>
+<tr><td bgcolor='#c4bebe'>Non</td><td align="center">48% (118)</td><td align="center">52% (129)</td><td align="center">247</td><td align='center' bgcolor='#aec4df'>0,93</td></tr>
+<tr><td bgcolor='#c4bebe'>Oui</td><td align="center">58% (87)</td><td align="center">42% (64)</td><td align="center">151</td><td align='center' bgcolor='#d9adab'>1,12</td></tr>
+<tr><td bgcolor='#7E8382'><b>Total</b></td><td align="center" bgcolor="#7E8382"><b>205</b></td><td align="center" bgcolor="#7E8382"><b>193</b></td><td align="center" bgcolor="#7E8382"><b>398</b></td><td align="center" bgcolor="#7E8382"><b>1,00</b></td></tr></table>
+<br><figure>
+	<img class="lifetest"src="images_site/life_DISS.jpg" alt="When demographers play the game of thrones" id="lifetest"/>
+	<figcaption>
+	<p id="t_justifie">	Les différences observées ici sont non significatives 
+	(d'après les <a href="methodo-duree.html#test_W_LR">statistiques du Log-Rang et de Wilcoxon</a>). <br>
+	Si vous souhaitez en savoir plus sur la lecture des courbes de survie (exemples et méthodologie général), 
+	<a href="methodo-duree.html">cliquez ici</a>.</p>
+	</figcaption>
+</figure>
+
+<hr>
+<a id="stat_RICH"><h2 align="center">Statistiques descriptives de la variable RICH<br>
+<a href="#RICH">Retourner à la section du dictionnaire de la variable RICH</a></h2></a>
+<table id='tableau_dico_var' border=6 align='center'><td bgcolor='#7E8382'><b>RICH</b></td><td align='center' bgcolor='#7E8382'><b>Décès</B></td><td align='center' bgcolor='#7E8382'><b>Survivants</B></td><td align='center' bgcolor='#7E8382'><b>Effectifs</B></td><td align='center' bgcolor='#7E8382'><b>Rapport de mortalité</td>
+<tr><td bgcolor='#c4bebe'>Sans biens</td><td align="center">45% (26)</td><td align="center">55% (32)</td><td align="center">58</td><td align='center' bgcolor='#aec4df'>0,87</td></tr>
+<tr><td bgcolor='#c4bebe'>Protection financière</td><td align="center">48% (87)</td><td align="center">52% (96)</td><td align="center">183</td><td align='center' bgcolor='#aec4df'>0,92</td></tr>
+<tr><td bgcolor='#c4bebe'>Capital foncier</td><td align="center">51% (50)</td><td align="center">49% (49)</td><td align="center">99</td><td align='center' bgcolor='#DCCED2'>0,98</td></tr>
+<tr><td bgcolor='#c4bebe'>Grande richesse foncière ou pécunière</td><td align="center">81% (34)</td><td align="center">19% (8)</td><td align="center">42</td><td align='center' bgcolor='#da362d'>1,57</td></tr>
+<tr><td bgcolor='#c4bebe'>NC</td><td align="center">50% (8)</td><td align="center">50% (8)</td><td align="center">16</td><td align='center' bgcolor='#DCCED2'>0,97</td></tr>
+<tr><td bgcolor='#7E8382'><b>Total</b></td><td align="center" bgcolor="#7E8382"><b>205</b></td><td align="center" bgcolor="#7E8382"><b>193</b></td><td align="center" bgcolor="#7E8382"><b>398</b></td><td align="center" bgcolor="#7E8382"><b>1,00</b></td></tr></table>
+<br><figure>
+	<img class="lifetest"src="images_site/life_RICH.jpg" alt="When demographers play the game of thrones" id="lifetest"/>
+	<figcaption>
+	<p id="t_justifie">	Les différences observées ici sont non significatives 
+	(d'après les <a href="methodo-duree.html#test_W_LR">statistiques du Log-Rang et de Wilcoxon</a>). <br>
+	Si vous souhaitez en savoir plus sur la lecture des courbes de survie (exemples et méthodologie général), 
+	<a href="methodo-duree.html">cliquez ici</a>.</p>
+	</figcaption>
+</figure>
+
+<hr>
+<a id="stat_NOBL"><h2 align="center">Statistiques descriptives de la variable NOBL<br>
+<a href="#NOBL">Retourner à la section du dictionnaire de la variable NOBL</a></h2></a>
+<table id='tableau_dico_var' border=6 align='center'><td bgcolor='#7E8382'><b>NOBL</b></td><td align='center' bgcolor='#7E8382'><b>Décès</B></td><td align='center' bgcolor='#7E8382'><b>Survivants</B></td><td align='center' bgcolor='#7E8382'><b>Effectifs</B></td><td align='center' bgcolor='#7E8382'><b>Rapport de mortalité</td>
+<tr><td bgcolor='#c4bebe'>Roturier ou ancien noble</td><td align="center">51% (128)</td><td align="center">49% (121)</td><td align="center">249</td><td align='center' bgcolor='#DCCED2'>1,00</td></tr>
+<tr><td bgcolor='#c4bebe'>Non héritier et non Seigneur</td><td align="center">41% (20)</td><td align="center">59% (29)</td><td align="center">49</td><td align='center' bgcolor='#89afdd'>0,79</td></tr>
+<tr><td bgcolor='#c4bebe'>Seigneur vassal ou héritier de vassal</td><td align="center">36% (15)</td><td align="center">64% (27)</td><td align="center">42</td><td align='center' bgcolor='#89afdd'>0,69</td></tr>
+<tr><td bgcolor='#c4bebe'>Seigneur ou héritier de seigneur</td><td align="center">81% (34)</td><td align="center">19% (8)</td><td align="center">42</td><td align='center' bgcolor='#da362d'>1,57</td></tr>
+<tr><td bgcolor='#c4bebe'>NC</td><td align="center">50% (8)</td><td align="center">50% (8)</td><td align="center">16</td><td align='center' bgcolor='#DCCED2'>0,97</td></tr>
+<tr><td bgcolor='#7E8382'><b>Total</b></td><td align="center" bgcolor="#7E8382"><b>205</b></td><td align="center" bgcolor="#7E8382"><b>193</b></td><td align="center" bgcolor="#7E8382"><b>398</b></td><td align="center" bgcolor="#7E8382"><b>1,00</b></td></tr></table>
+<br><figure>
+	<img class="lifetest"src="images_site/life_NOBL.jpg" alt="When demographers play the game of thrones" id="lifetest"/>
+	<figcaption>
+	<p id="t_justifie">	Les différences observées ici sont non significatives 
+	(d'après les <a href="methodo-duree.html#test_W_LR">statistiques du Log-Rang et de Wilcoxon</a>). <br>
+	Si vous souhaitez en savoir plus sur la lecture des courbes de survie (exemples et méthodologie général), 
+	<a href="methodo-duree.html">cliquez ici</a>.</p>
+	</figcaption>
+</figure>
+
+<hr>
+<a id="stat_REGN"><h2 align="center">Statistiques descriptives de la variable REGN<br>
+<a href="#REGN">Retourner à la section du dictionnaire de la variable REGN</a></h2></a>
+<table id='tableau_dico_var' border=6 align='center'><td bgcolor='#7E8382'><b>REGN</b></td><td align='center' bgcolor='#7E8382'><b>Décès</B></td><td align='center' bgcolor='#7E8382'><b>Survivants</B></td><td align='center' bgcolor='#7E8382'><b>Effectifs</B></td><td align='center' bgcolor='#7E8382'><b>Rapport de mortalité</td>
+<tr><td bgcolor='#c4bebe'>Non</td><td align="center">49% (148)</td><td align="center">51% (153)</td><td align="center">301</td><td align='center' bgcolor='#DCCED2'>0,95</td></tr>
+<tr><td bgcolor='#c4bebe'>Oui</td><td align="center">59% (57)</td><td align="center">41% (40)</td><td align="center">97</td><td align='center' bgcolor='#d9adab'>1,14</td></tr>
+<tr><td bgcolor='#7E8382'><b>Total</b></td><td align="center" bgcolor="#7E8382"><b>205</b></td><td align="center" bgcolor="#7E8382"><b>193</b></td><td align="center" bgcolor="#7E8382"><b>398</b></td><td align="center" bgcolor="#7E8382"><b>1,00</b></td></tr></table>
+<br><figure>
+	<img class="lifetest"src="images_site/life_REGN.jpg" alt="When demographers play the game of thrones" id="lifetest"/>
+	<figcaption>
+	<p id="t_justifie">	Les différences observées ici sont non significatives 
+	(d'après les <a href="methodo-duree.html#test_W_LR">statistiques du Log-Rang et de Wilcoxon</a>). <br>
+	Si vous souhaitez en savoir plus sur la lecture des courbes de survie (exemples et méthodologie général), 
+	<a href="methodo-duree.html">cliquez ici</a>.</p>
+	</figcaption>
+</figure>
+
+<hr>
+<a id="stat_RP"><h2 align="center">Statistiques descriptives de la variable RP<br>
+<a href="#RP">Retourner à la section du dictionnaire de la variable RP</a></h2></a>
+<table id='tableau_dico_var' border=6 align='center'><td bgcolor='#7E8382'><b>RP</b></td><td align='center' bgcolor='#7E8382'><b>Décès</B></td><td align='center' bgcolor='#7E8382'><b>Survivants</B></td><td align='center' bgcolor='#7E8382'><b>Effectifs</B></td><td align='center' bgcolor='#7E8382'><b>Rapport de mortalité</td>
+<tr><td bgcolor='#c4bebe'>Non</td><td align="center">47% (129)</td><td align="center">53% (145)</td><td align="center">274</td><td align='center' bgcolor='#aec4df'>0,91</td></tr>
+<tr><td bgcolor='#c4bebe'>Oui</td><td align="center">61% (76)</td><td align="center">39% (48)</td><td align="center">124</td><td align='center' bgcolor='#d67e79'>1,19</td></tr>
+<tr><td bgcolor='#7E8382'><b>Total</b></td><td align="center" bgcolor="#7E8382"><b>205</b></td><td align="center" bgcolor="#7E8382"><b>193</b></td><td align="center" bgcolor="#7E8382"><b>398</b></td><td align="center" bgcolor="#7E8382"><b>1,00</b></td></tr></table>
+<br>
+
+<hr>
+<a id="stat_CR"><h2 align="center">Statistiques descriptives de la variable CR<br>
+<a href="#CR">Retourner à la section du dictionnaire de la variable CR</a></h2></a>
+<table id='tableau_dico_var' border=6 align='center'><td bgcolor='#7E8382'><b>CR</b></td><td align='center' bgcolor='#7E8382'><b>Décès</B></td><td align='center' bgcolor='#7E8382'><b>Survivants</B></td><td align='center' bgcolor='#7E8382'><b>Effectifs</B></td><td align='center' bgcolor='#7E8382'><b>Rapport de mortalité</td>
+<tr><td bgcolor='#c4bebe'>Non</td><td align="center">52% (192)</td><td align="center">48% (174)</td><td align="center">366</td><td align='center' bgcolor='#DCCED2'>1,02</td></tr>
+<tr><td bgcolor='#c4bebe'>Oui</td><td align="center">41% (13)</td><td align="center">59% (19)</td><td align="center">32</td><td align='center' bgcolor='#89afdd'>0,79</td></tr>
+<tr><td bgcolor='#7E8382'><b>Total</b></td><td align="center" bgcolor="#7E8382"><b>205</b></td><td align="center" bgcolor="#7E8382"><b>193</b></td><td align="center" bgcolor="#7E8382"><b>398</b></td><td align="center" bgcolor="#7E8382"><b>1,00</b></td></tr></table>
+<br><figure>
+	<img class="lifetest"src="images_site/life_CR.jpg" alt="When demographers play the game of thrones" id="lifetest"/>
+	<figcaption>
+		Ici, nous pouvons suspecter une <a href="methodo-duree.html#titre3">survie prédéterminée</a>. <br>
+		En effet, peut-être qu’une partie des personnages ont fait parti d’un conseil restreint parce qu’ils ont vécu plus longtemps que 
+		les autres. Par prudence, nous n’irons pas plus loin dans l’analyse de cette variable ici. <br>
+		Seuils inférieurs à 0,01% (<a href="methodo-duree.html#test_W_LR">statistiques du Log-Rang et de Wilcoxon</a>). <br>
+		Si vous souhaitez en savoir plus sur la lecture des courbes de survie (exemples et méthodologie général), 
+		<a href="methodo-duree.html">cliquez ici</a>.</p>
+	</figcaption>
+</figure>
+
+<hr>
+<a id="stat_TNN"><h2 align="center">Statistiques descriptives de la variable TNN<br>
+<a href="#TNN">Retourner à la section du dictionnaire de la variable TNN</a></h2></a>
+<table id='tableau_dico_var' border=6 align='center'><td bgcolor='#7E8382'><b>TNN</b></td><td align='center' bgcolor='#7E8382'><b>Décès</B></td><td align='center' bgcolor='#7E8382'><b>Survivants</B></td><td align='center' bgcolor='#7E8382'><b>Effectifs</B></td><td align='center' bgcolor='#7E8382'><b>Rapport de mortalité</td>
+<tr><td bgcolor='#c4bebe'>N'a tué aucun personnage</td><td align="center">52% (177)</td><td align="center">48% (166)</td><td align="center">343</td><td align='center' bgcolor='#DCCED2'>1,00</td></tr>
+<tr><td bgcolor='#c4bebe'>A tué entre 1 et 3 personnages non nommés</td><td align="center">71% (20)</td><td align="center">29% (8)</td><td align="center">28</td><td align='center' bgcolor='#d55851'>1,39</td></tr>
+<tr><td bgcolor='#c4bebe'>A tué 4 personnages ou plus</td><td align="center">30% (8)</td><td align="center">70% (19)</td><td align="center">27</td><td align='center' bgcolor='#89afdd'>0,58</td></tr>
+<tr><td bgcolor='#7E8382'><b>Total</b></td><td align="center" bgcolor="#7E8382"><b>205</b></td><td align="center" bgcolor="#7E8382"><b>193</b></td><td align="center" bgcolor="#7E8382"><b>398</b></td><td align="center" bgcolor="#7E8382"><b>1,00</b></td></tr></table>
+<br><figure>
+	<img class="lifetest"src="images_site/life_TNN.jpg" alt="When demographers play the game of thrones" id="lifetest"/>
+	<figcaption>
+		Ceux qui ont tué au moins un personnage non nommé vivent en moyenne plus longtemps (car ils ont eu le temps de tuer) ; 
+		analyse impossible car il s'agit d'une <a href="methodo-duree.html#titre3">courbe de survie prédéterminée</a>. <br>
+		Seuils inférieurs à 0,01% (<a href="methodo-duree.html#test_W_LR">statistiques du Log-Rang et de Wilcoxon</a>). <br>
+		Si vous souhaitez en savoir plus sur la lecture des courbes de survie (exemples et méthodologie général), 
+		<a href="methodo-duree.html">cliquez ici</a>.</p>
+	</figcaption>
+</figure>
+
+<hr>
+<a id="stat_TN"><h2 align="center">Statistiques descriptives de la variable TN<br>
+<a href="#TN">Retourner à la section du dictionnaire de la variable TN</a></h2></a>
+<table id='tableau_dico_var' border=6 align='center'><td bgcolor='#7E8382'><b>TN</b></td><td align='center' bgcolor='#7E8382'><b>Décès</B></td><td align='center' bgcolor='#7E8382'><b>Survivants</B></td><td align='center' bgcolor='#7E8382'><b>Effectifs</B></td><td align='center' bgcolor='#7E8382'><b>Rapport de mortalité</td>
+<tr><td bgcolor='#c4bebe'>N'a tué aucun personnage</td><td align="center">51% (169)</td><td align="center">49% (164)</td><td align="center">333</td><td align='center' bgcolor='#DCCED2'>0,99</td></tr>
+<tr><td bgcolor='#c4bebe'>A tué entre 1 et 2 personnages non nommés</td><td align="center">63% (31)</td><td align="center">37% (18)</td><td align="center">49</td><td align='center' bgcolor='#d67e79'>1,23</td></tr>
+<tr><td bgcolor='#c4bebe'>A tué 3 personnages ou plus</td><td align="center">31% (5)</td><td align="center">69% (11)</td><td align="center">16</td><td align='center' bgcolor='#89afdd'>0,61</td></tr>
+<tr><td bgcolor='#7E8382'><b>Total</b></td><td align="center" bgcolor="#7E8382"><b>205</b></td><td align="center" bgcolor="#7E8382"><b>193</b></td><td align="center" bgcolor="#7E8382"><b>398</b></td><td align="center" bgcolor="#7E8382"><b>1,00</b></td></tr></table>
+<br><figure>
+	<img class="lifetest"src="images_site/life_TN.jpg" alt="When demographers play the game of thrones" id="lifetest"/>
+	<figcaption>
+		Ceux qui ont tué au moins un personnage nommé vivent en moyenne plus longtemps (car ils ont eu le temps de tuer) ; 
+		analyse impossible car il s'agit d'une <a href="methodo-duree.html#titre3">courbe de survie prédéterminée</a>. <br>
+		Seuils inférieurs à 0,01% (<a href="methodo-duree.html#test_W_LR">statistiques du Log-Rang et de Wilcoxon</a>). <br>
+		Si vous souhaitez en savoir plus sur la lecture des courbes de survie (exemples et méthodologie général), 
+		<a href="methodo-duree.html">cliquez ici</a>.</p>
+	</figcaption>
+</figure>
+
+<hr>
+<a id="stat_COMM"><h2 align="center">Statistiques descriptives de la variable COMM<br>
+<a href="#COMM">Retourner à la section du dictionnaire de la variable COMM</a></h2></a>
+<table id='tableau_dico_var' border=6 align='center'><td bgcolor='#7E8382'><b>COMM</b></td><td align='center' bgcolor='#7E8382'><b>Décès</B></td><td align='center' bgcolor='#7E8382'><b>Survivants</B></td><td align='center' bgcolor='#7E8382'><b>Effectifs</B></td><td align='center' bgcolor='#7E8382'><b>Rapport de mortalité</td>
+<tr><td bgcolor='#c4bebe'>Non</td><td align="center">51% (193)</td><td align="center">49% (184)</td><td align="center">377</td><td align='center' bgcolor='#DCCED2'>0,99</td></tr>
+<tr><td bgcolor='#c4bebe'>Oui</td><td align="center">57% (12)</td><td align="center">43% (9)</td><td align="center">21</td><td align='center' bgcolor='#d9adab'>1,11</td></tr>
+<tr><td bgcolor='#7E8382'><b>Total</b></td><td align="center" bgcolor="#7E8382"><b>205</b></td><td align="center" bgcolor="#7E8382"><b>193</b></td><td align="center" bgcolor="#7E8382"><b>398</b></td><td align="center" bgcolor="#7E8382"><b>1,00</b></td></tr></table>
+<br><figure>
+	<img class="lifetest"src="images_site/life_COMM.jpg" alt="When demographers play the game of thrones" id="lifetest"/>
+	<figcaption>
+		Ceux qui ont commandité l'assassinat d'au moins un personnage nommé vivent en moyenne plus longtemps (car ils ont eu le temps de commanditer) ; 
+		analyse impossible car il s'agit d'une <a href="methodo-duree.html#titre3">courbe de survie prédéterminée</a>. <br>
+		Seuils inférieurs à 0,01% (<a href="methodo-duree.html#test_W_LR">statistiques du Log-Rang et de Wilcoxon</a>). <br>
+		Si vous souhaitez en savoir plus sur la lecture des courbes de survie (exemples et méthodologie général), 
+		<a href="methodo-duree.html">cliquez ici</a>.</p>
+	</figcaption>
+</figure>
+
+<hr>
+<a id="stat_POPTN"><h2 align="center">Statistiques descriptives de la variable POPTN<br>
+<a href="#POPTN">Retourner à la section du dictionnaire de la variable POPTN</a></h2></a>
+<table id='tableau_dico_var' border=6 align='center'><td bgcolor='#7E8382'><b>POPTN</b></td><td align='center' bgcolor='#7E8382'><b>Décès</B></td><td align='center' bgcolor='#7E8382'><b>Survivants</B></td><td align='center' bgcolor='#7E8382'><b>Effectifs</B></td><td align='center' bgcolor='#7E8382'><b>Rapport de mortalité</td>
+<tr><td bgcolor='#c4bebe'>N'a tué aucun pers</td><td align="center">51% (168)</td><td align="center">49% (164)</td><td align="center">332</td><td align='center' bgcolor='#DCCED2'>0,98</td></tr>
+<tr><td bgcolor='#c4bebe'>Aucun vote de pop.</td><td align="center">56% (18)</td><td align="center">44% (14)</td><td align="center">32</td><td align='center' bgcolor='#d9adab'>1,09</td></tr>
+<tr><td bgcolor='#c4bebe'>Moins de 10 000 votes de pop.</td><td align="center">71% (10)</td><td align="center">29% (4)</td><td align="center">14</td><td align='center' bgcolor='#d55851'>1,39</td></tr>
+<tr><td bgcolor='#c4bebe'>Plus de 10 000 votes de pop.</td><td align="center">45% (9)</td><td align="center">55% (11)</td><td align="center">20</td><td align='center' bgcolor='#aec4df'>0,87</td></tr>
+<tr><td bgcolor='#7E8382'><b>Total</b></td><td align="center" bgcolor="#7E8382"><b>205</b></td><td align="center" bgcolor="#7E8382"><b>193</b></td><td align="center" bgcolor="#7E8382"><b>398</b></td><td align="center" bgcolor="#7E8382"><b>1,00</b></td></tr></table>
+<p id="t_centre">Les courbes de survie seraient prédéterminée comme celle des tués nommés (voir <a href="#stat_TN">ici</a>)</p>
+
+<hr>
+<a id="stat_IMPOPTN"><h2 align="center">Statistiques descriptives de la variable IMPOPTN<br>
+<a href="#IMPOPTN">Retourner à la section du dictionnaire de la variable IMPOPTN</a></h2></a>
+<table id='tableau_dico_var' border=6 align='center'><td bgcolor='#7E8382'><b>IMPOPTN</b></td><td align='center' bgcolor='#7E8382'><b>Décès</B></td><td align='center' bgcolor='#7E8382'><b>Survivants</B></td><td align='center' bgcolor='#7E8382'><b>Effectifs</B></td><td align='center' bgcolor='#7E8382'><b>Rapport de mortalité</td>
+<tr><td bgcolor='#c4bebe'>N'a tué aucune pers</td><td align="center">51% (169)</td><td align="center">49% (164)</td><td align="center">333</td><td align='center' bgcolor='#DCCED2'>0,99</td></tr>
+<tr><td bgcolor='#c4bebe'>Aucun vote d'impop</td><td align="center">56% (18)</td><td align="center">44% (14)</td><td align="center">32</td><td align='center' bgcolor='#d9adab'>1,09</td></tr>
+<tr><td bgcolor='#c4bebe'>Moins de 70 votes d'impop</td><td align="center">73% (11)</td><td align="center">27% (4)</td><td align="center">15</td><td align='center' bgcolor='#d55851'>1,42</td></tr>
+<tr><td bgcolor='#c4bebe'>Plus de 70 votes d'impop</td><td align="center">39% (7)</td><td align="center">61% (11)</td><td align="center">18</td><td align='center' bgcolor='#89afdd'>0,76</td></tr>
+<tr><td bgcolor='#7E8382'><b>Total</b></td><td align="center" bgcolor="#7E8382"><b>205</b></td><td align="center" bgcolor="#7E8382"><b>193</b></td><td align="center" bgcolor="#7E8382"><b>398</b></td><td align="center" bgcolor="#7E8382"><b>1,00</b></td></tr></table>
+<p>Les courbes de survie seraient prédéterminée comme celle des tués nommés (voir <a href="#stat_TN">ici</a>)</p>
+
+<hr>
+<a id="stat_COMB"><h2 align="center">Statistiques descriptives de la variable COMB<br>
+<a href="#COMB">Retourner à la section du dictionnaire de la variable COMB</a></h2></a>
+<table id='tableau_dico_var' border=6 align='center'><td bgcolor='#7E8382'><b>COMB</b></td><td align='center' bgcolor='#7E8382'><b>Décès</B></td><td align='center' bgcolor='#7E8382'><b>Survivants</B></td><td align='center' bgcolor='#7E8382'><b>Effectifs</B></td><td align='center' bgcolor='#7E8382'><b>Rapport de mortalité</td>
+<tr><td bgcolor='#c4bebe'>Non combattant</td><td align="center">37% (66)</td><td align="center">63% (113)</td><td align="center">179</td><td align='center' bgcolor='#89afdd'>0,72</td></tr>
+<tr><td bgcolor='#c4bebe'>Garde royal.e</td><td align="center">38% (6)</td><td align="center">63% (10)</td><td align="center">16</td><td align='center' bgcolor='#89afdd'>0,73</td></tr>
+<tr><td bgcolor='#c4bebe'>Chevalier</td><td align="center">48% (13)</td><td align="center">52% (14)</td><td align="center">27</td><td align='center' bgcolor='#aec4df'>0,93</td></tr>
+<tr><td bgcolor='#c4bebe'>Autre combattant</td><td align="center">68% (120)</td><td align="center">32% (56)</td><td align="center">176</td><td align='center' bgcolor='#d67e79'>1,32</td></tr>
+<tr><td bgcolor='#7E8382'><b>Total</b></td><td align="center" bgcolor="#7E8382"><b>205</b></td><td align="center" bgcolor="#7E8382"><b>193</b></td><td align="center" bgcolor="#7E8382"><b>398</b></td><td align="center" bgcolor="#7E8382"><b>1,00</b></td></tr></table>
+<br><figure>
+	<img class="lifetest"src="images_site/life_COMB.jpg" alt="When demographers play the game of thrones" id="lifetest"/>
+	<figcaption>
+	<p id="t_justifie">	Les autres combattant connaissent au début de leur survie dans la série une mortalité extrême (première heure)
+	par rapport aux non combattants. On peut remarquer que la courbe des survivants des autres combattants ressemble à celle des hommes 
+	tandis que celle des non combattants resssemblent à celle des hommes (voir <a href="dossier.html">dossier</a>).
+	Ainsi, les <a href="methodo-duree.html#test_W_LR">statistiques du Log-Rang et de Wilcoxon</a> tendent à confirmer que ces différences existent 
+	(seuil de risque à 1,5% et 0,4%).<br>
+	Si vous souhaitez en savoir plus sur la lecture des courbes de survie (exemples et méthodologie général), 
+		<a href="methodo-duree.html">cliquez ici</a>.</p>
+	</figcaption>
+</figure>
+
+<hr>
+<a id="stat_RELIGIEUX"><h2 align="center">Statistiques descriptives de la variable RELIGIEUX<br>
+<a href="#RELIGIEUX">Retourner à la section du dictionnaire de la variable RELIGIEUX</a></h2></a>
+<table id='tableau_dico_var' border=6 align='center'><td bgcolor='#7E8382'><b>RELIGIEUX</b></td><td align='center' bgcolor='#7E8382'><b>Décès</B></td><td align='center' bgcolor='#7E8382'><b>Survivants</B></td><td align='center' bgcolor='#7E8382'><b>Effectifs</B></td><td align='center' bgcolor='#7E8382'><b>Rapport de mortalité</td>
+<tr><td bgcolor='#c4bebe'>Non</td><td align="center">51% (189)</td><td align="center">49% (179)</td><td align="center">368</td><td align='center' bgcolor='#DCCED2'>1,00</td></tr>
+<tr><td bgcolor='#c4bebe'>Oui</td><td align="center">53% (16)</td><td align="center">47% (14)</td><td align="center">30</td><td align='center' bgcolor='#DCCED2'>1,04</td></tr>
+<tr><td bgcolor='#7E8382'><b>Total</b></td><td align="center" bgcolor="#7E8382"><b>205</b></td><td align="center" bgcolor="#7E8382"><b>193</b></td><td align="center" bgcolor="#7E8382"><b>398</b></td><td align="center" bgcolor="#7E8382"><b>1,00</b></td></tr></table>
+<p id="t_centre">Effectifs trop faibles pour les religieux pour faire des courbes de survie.</p>
+
+<hr>
+<a id="stat_PROST"><h2 align="center">Statistiques descriptives de la variable PROST<br>
+<a href="#PROST">Retourner à la section du dictionnaire de la variable PROST</a></h2></a>
+<table id='tableau_dico_var' border=6 align='center'><td bgcolor='#7E8382'><b>PROST</b></td><td align='center' bgcolor='#7E8382'><b>Décès</B></td><td align='center' bgcolor='#7E8382'><b>Survivants</B></td><td align='center' bgcolor='#7E8382'><b>Effectifs</B></td><td align='center' bgcolor='#7E8382'><b>Rapport de mortalité</td>
+<tr><td bgcolor='#c4bebe'>Non</td><td align="center">53% (203)</td><td align="center">47% (179)</td><td align="center">382</td><td align='center' bgcolor='#DCCED2'>1,03</td></tr>
+<tr><td bgcolor='#c4bebe'>Oui</td><td align="center">13% (2)</td><td align="center">88% (14)</td><td align="center">16</td><td align='center' bgcolor='#6598d6'>0,24</td></tr>
+<tr><td bgcolor='#7E8382'><b>Total</b></td><td align="center" bgcolor="#7E8382"><b>205</b></td><td align="center" bgcolor="#7E8382"><b>193</b></td><td align="center" bgcolor="#7E8382"><b>398</b></td><td align="center" bgcolor="#7E8382"><b>1,00</b></td></tr></table>
+<p id="t_centre">Effectifs trop faibles pour les prostituées pour faire des courbes de survie.</p>
+
+<hr>
+<a id="stat_POP"><h2 align="center">Statistiques descriptives de la variable POP<br>
+<a href="#POP">Retourner à la section du dictionnaire de la variable POP</a></h2></a>
+<table id='tableau_dico_var' border=6 align='center'><td bgcolor='#7E8382'><b>POP</b></td><td align='center' bgcolor='#7E8382'><b>Décès</B></td><td align='center' bgcolor='#7E8382'><b>Survivants</B></td><td align='center' bgcolor='#7E8382'><b>Effectifs</B></td><td align='center' bgcolor='#7E8382'><b>Rapport de mortalité</td>
+<tr><td bgcolor='#c4bebe'>Aucun vote</td><td align="center">47% (132)</td><td align="center">53% (148)</td><td align="center">280</td><td align='center' bgcolor='#aec4df'>0,92</td></tr>
+<tr><td bgcolor='#c4bebe'>Moins de 100 votes</td><td align="center">79% (19)</td><td align="center">21% (5)</td><td align="center">24</td><td align='center' bgcolor='#da362d'>1,54</td></tr>
+<tr><td bgcolor='#c4bebe'>Entre 101 et 1 000 votes</td><td align="center">75% (24)</td><td align="center">25% (8)</td><td align="center">32</td><td align='center' bgcolor='#da362d'>1,46</td></tr>
+<tr><td bgcolor='#c4bebe'>Entre 1 001 et 10 000</td><td align="center">58% (15)</td><td align="center">42% (11)</td><td align="center">26</td><td align='center' bgcolor='#d9adab'>1,12</td></tr>
+<tr><td bgcolor='#c4bebe'>Entre 10 001 et 50 000</td><td align="center">45% (10)</td><td align="center">55% (12)</td><td align="center">22</td><td align='center' bgcolor='#aec4df'>0,88</td></tr>
+<tr><td bgcolor='#c4bebe'>Plus de 50 000</td><td align="center">36% (5)</td><td align="center">64% (9)</td><td align="center">14</td><td align='center' bgcolor='#89afdd'>0,69</td></tr>
+<tr><td bgcolor='#7E8382'><b>Total</b></td><td align="center" bgcolor="#7E8382"><b>205</b></td><td align="center" bgcolor="#7E8382"><b>193</b></td><td align="center" bgcolor="#7E8382"><b>398</b></td><td align="center" bgcolor="#7E8382"><b>1,00</b></td></tr></table>
+<br><figure>
+	<img class="lifetest"src="images_site/life_POP.jpg" alt="When demographers play the game of thrones" id="lifetest"/>
+	<figcaption>
+		La popularité dépend de beaucoup du temps d’apparition d’un personnage : il s'agit donc d'une courbe de <a href="methodo-duree.html#titre3">survie prédéterminée</a>. 
+		<a href="iens_entre_var.html#titre1">Plus celui-ci apparaît plus il récolte de vote<span>Pour en savoir plus, cliquez !</span></a>. Nous pourrions simplement la normaliser en supposant que ces votes ont été obtenus de 
+		manière uniforme selon les apparitions mais nous pensons que cela ne suffit pas ici. En effet, nous avons observé que sur les 
+		131 personnages n’apparaissant qu’au cours d’un épisode seul un a récolté des votes. Apparaître peu semble entraîner quasi-automatiquement une absence de popularité. A l’inverse, tous les 
+		personnages étant apparus 20 fois à l’écran ont obtenu au moins un vote. Sans cette causalité, nous aurions pu envisager de normaliser
+		le nombre de vote par le nombre d'épisode d'apparition (nombre de votes moyen par épisode d'apparition) mais cela ne suffit pas.<br>
+		Seuils inférieurs à 0,01% (<a href="methodo-duree.html#test_W_LR">statistiques du Log-Rang et de Wilcoxon</a>). <br>
+		Si vous souhaitez en savoir plus sur la lecture des courbes de survie (exemples et méthodologie général), 
+		<a href="methodo-duree.html">cliquez ici</a>.</p>
+	</figcaption>
+</figure>
+
+<hr>
+<a id="stat_IMPOP"><h2 align="center">Statistiques descriptives de la variable IMPOP<br>
+<a href="#IMPOP">Retourner à la section du dictionnaire de la variable IMPOP</a></h2></a>
+<table id='tableau_dico_var' border=6 align='center'><td bgcolor='#7E8382'><b>IMPOP</b></td><td align='center' bgcolor='#7E8382'><b>Décès</B></td><td align='center' bgcolor='#7E8382'><b>Survivants</B></td><td align='center' bgcolor='#7E8382'><b>Effectifs</B></td><td align='center' bgcolor='#7E8382'><b>Rapport de mortalité</td>
+<tr><td bgcolor='#c4bebe'>Moins de 25 votes</td><td align="center">45% (106)</td><td align="center">55% (128)</td><td align="center">234</td><td align='center' bgcolor='#aec4df'>0,88</td></tr>
+<tr><td bgcolor='#c4bebe'>De 25 à 70 votes</td><td align="center">55% (54)</td><td align="center">45% (44)</td><td align="center">98</td><td align='center' bgcolor='#d9adab'>1,07</td></tr>
+<tr><td bgcolor='#c4bebe'>De 70 à 240 votes</td><td align="center">62% (21)</td><td align="center">38% (13)</td><td align="center">34</td><td align='center' bgcolor='#d67e79'>1,20</td></tr>
+<tr><td bgcolor='#c4bebe'>Plus de 240 votes</td><td align="center">75% (24)</td><td align="center">25% (8)</td><td align="center">32</td><td align='center' bgcolor='#da362d'>1,46</td></tr>
+<tr><td bgcolor='#7E8382'><b>Total</b></td><td align="center" bgcolor="#7E8382"><b>205</b></td><td align="center" bgcolor="#7E8382"><b>193</b></td><td align="center" bgcolor="#7E8382"><b>398</b></td><td align="center" bgcolor="#7E8382"><b>1,00</b></td></tr></table>
+<br><figure>
+	<img class="lifetest"src="images_site/life_IMPOP.jpg" alt="When demographers play the game of thrones" id="lifetest"/>
+	<figcaption>
+		Les personnages aillant une très faible impopularité meurent beaucoup plus vite que les autres.
+		Nous n’observons pas de relation linéaire entre nombre d’épisodes d’apparition et impopularité. 
+		Ainsi, certains personnages n’apparaissant qu’un épisode arrive à être impopulaire aux yeux des téléspectateurs (10% de ces personnages recueillent plus de 240 votes d’impopularité), ce qui n’était pas le cas pour l’impopularité). 
+		Néanmoins la population des personnages ayant recueillis moins 240 votes est composée à 50% de personnages étant apparus un épisode contre 10% pour les autres personnages. Il s'agit donc d'une courbe de <a href="methodo-duree.html#titre3">survie prédéterminée</a> : plus le personnage survit longtemps, plus il aura tendance à pouvoir devenir impopulaire.<br>
+		Seuils inférieurs à 0,01% (<a href="methodo-duree.html#test_W_LR">statistiques du Log-Rang et de Wilcoxon</a>). <br>
+		Si vous souhaitez en savoir plus sur la lecture des courbes de survie (exemples et méthodologie général), 
+		<a href="methodo-duree.html">cliquez ici</a>.</p>
+	</figcaption>
+</figure>
+
+<hr>
+<a id="stat_Ep."><h2 align="center">Statistiques descriptives de la variable Ep.<br>
+<a href="#Ep.">Retourner à la section du dictionnaire de la variable Ep.</a></h2></a>
+<table id='tableau_dico_var' border=6 align='center'><td bgcolor='#7E8382'><b>Ep.</b></td><td align='center' bgcolor='#7E8382'><b>Décès</B></td><td align='center' bgcolor='#7E8382'><b>Survivants</B></td><td align='center' bgcolor='#7E8382'><b>Effectifs</B></td><td align='center' bgcolor='#7E8382'><b>Rapport de mortalité</td>
+<tr><td bgcolor='#c4bebe'>Un ou deux</td><td align="center">42% (80)</td><td align="center">58% (111)</td><td align="center">191</td><td align='center' bgcolor='#89afdd'>0,81</td></tr>
+<tr><td bgcolor='#c4bebe'>Trois ou quatre</td><td align="center">53% (31)</td><td align="center">47% (28)</td><td align="center">59</td><td align='center' bgcolor='#DCCED2'>1,02</td></tr>
+<tr><td bgcolor='#c4bebe'>De cinq à vingt</td><td align="center">75% (79)</td><td align="center">25% (26)</td><td align="center">105</td><td align='center' bgcolor='#da362d'>1,46</td></tr>
+<tr><td bgcolor='#c4bebe'>De vingt et un à trente</td><td align="center">56% (14)</td><td align="center">44% (11)</td><td align="center">25</td><td align='center' bgcolor='#d9adab'>1,09</td></tr>
+<tr><td bgcolor='#c4bebe'>Plus de trente</td><td align="center">6% (1)</td><td align="center">94% (17)</td><td align="center">18</td><td align='center' bgcolor='#538ed5'>0,11</td></tr>
+<tr><td bgcolor='#7E8382'><b>Total</b></td><td align="center" bgcolor="#7E8382"><b>205</b></td><td align="center" bgcolor="#7E8382"><b>193</b></td><td align="center" bgcolor="#7E8382"><b>398</b></td><td align="center" bgcolor="#7E8382"><b>1,00</b></td></tr></table>
+<p id="t_centre">La courbe de survie n'aurait pas de sens : bien sûr les personnages apparaissant un grand nombre d'épisodes vivent plus longtemps
+que ceux qui n'apparaissent qu'un épisode.</p>
+
+<a id="stat_TEMPSS7"><h2 align="center">Statistiques descriptives de la variable TEMPSS7<br>
+<a href="#TEMPSS7">Retourner à la section du dictionnaire de la variable TEMPSS7</a></h2></a>
+<table id='tableau_dico_var' border=6 align='center'><td bgcolor='#7E8382'><b>TEMPSS7</b></td><td align='center' bgcolor='#7E8382'><b>Décès</B></td><td align='center' bgcolor='#7E8382'><b>Survivants</B></td><td align='center' bgcolor='#7E8382'><b>Effectifs</B></td><td align='center' bgcolor='#7E8382'><b>Rapport de mortalité</td>
+<tr><td bgcolor='#c4bebe'>Moins d'une minute</td><td align="center">40% (49)</td><td align="center">60% (75)</td><td align="center">124</td><td align='center' bgcolor='#89afdd'>0,77</td></tr>
+<tr><td bgcolor='#c4bebe'>Une ou deux minutes</td><td align="center">42% (36)</td><td align="center">58% (49)</td><td align="center">85</td><td align='center' bgcolor='#89afdd'>0,82</td></tr>
+<tr><td bgcolor='#c4bebe'>Trois à neuf minutes</td><td align="center">60% (52)</td><td align="center">40% (34)</td><td align="center">86</td><td align='center' bgcolor='#d67e79'>1,17</td></tr>
+<tr><td bgcolor='#c4bebe'>Dix à quarante-neuf minutes</td><td align="center">79% (58)</td><td align="center">21% (15)</td><td align="center">73</td><td align='center' bgcolor='#da362d'>1,54</td></tr>
+<tr><td bgcolor='#c4bebe'>Plus de cinquante minutes</td><td align="center">33% (10)</td><td align="center">67% (20)</td><td align="center">30</td><td align='center' bgcolor='#89afdd'>0,65</td></tr>
+<tr><td bgcolor='#7E8382'><b>Total</b></td><td align="center" bgcolor="#7E8382"><b>205</b></td><td align="center" bgcolor="#7E8382"><b>193</b></td><td align="center" bgcolor="#7E8382"><b>398</b></td><td align="center" bgcolor="#7E8382"><b>1,00</b></td></tr></table>
+<p id="t_centre">La courbe de survie n'aurait pas de sens : bien sûr les personnages apparaissant un grand nombre de minutes à l'écran
+au cours des sept premières saisons vivent plus longtemps que ceux qui n'apparaissent que quelques minutes.</p>
+
+<a id="stat_TEMPS_MOYEN_VU"><h2 align="center">Statistiques descriptives de la variable TEMPS_MOYEN_VU<br>
+<a href="#TEMPS_MOYEN_VU">Retourner à la section du dictionnaire de la variable TEMPS_MOYEN_VU</a></h2></a>
+<table id='tableau_dico_var' border=6 align='center'><td bgcolor='#7E8382'><b>TEMPS_MOYEN_VU</b></td><td align='center' bgcolor='#7E8382'><b>Décès</B></td><td align='center' bgcolor='#7E8382'><b>Survivants</B></td><td align='center' bgcolor='#7E8382'><b>Effectifs</B></td><td align='center' bgcolor='#7E8382'><b>Rapport de mortalité</td>
+<tr><td bgcolor='#c4bebe'>0 minute</td><td align="center">40% (49)</td><td align="center">60% (75)</td><td align="center">124</td><td align='center' bgcolor='#89afdd'>0,78</td></tr>
+<tr><td bgcolor='#c4bebe'>Moins d'une demie minute</td><td align="center">40% (23)</td><td align="center">60% (34)</td><td align="center">57</td><td align='center' bgcolor='#89afdd'>0,78</td></tr>
+<tr><td bgcolor='#c4bebe'>Moins d'une minute</td><td align="center">56% (42)</td><td align="center">44% (33)</td><td align="center">75</td><td align='center' bgcolor='#d9adab'>1,09</td></tr>
+<tr><td bgcolor='#c4bebe'>Moins d'une minute et demie</td><td align="center">68% (19)</td><td align="center">32% (9)</td><td align="center">28</td><td align='center' bgcolor='#d67e79'>1,32</td></tr>
+<tr><td bgcolor='#c4bebe'>Moins de deux minutes</td><td align="center">67% (31)</td><td align="center">33% (15)</td><td align="center">46</td><td align='center' bgcolor='#d67e79'>1,30</td></tr>
+<tr><td bgcolor='#c4bebe'>Moins de trois minutes</td><td align="center">58% (23)</td><td align="center">43% (17)</td><td align="center">40</td><td align='center' bgcolor='#d9adab'>1,13</td></tr>
+<tr><td bgcolor='#c4bebe'>Plus de trois minutes</td><td align="center">64% (18)</td><td align="center">36% (10)</td><td align="center">28</td><td align='center' bgcolor='#d67e79'>1,24</td></tr>
+<tr><td bgcolor='#7E8382'><b>Total</b></td><td align="center" bgcolor="#7E8382"><b>205</b></td><td align="center" bgcolor="#7E8382"><b>193</b></td><td align="center" bgcolor="#7E8382"><b>398</b></td><td align="center" bgcolor="#7E8382"><b>1,00</b></td></tr></table>
+<br><figure>
+	<img class="lifetest"src="images_site/life_TEMPS_MOYEN_VU.jpg" alt="When demographers play the game of thrones" id="lifetest"/>
+	<figcaption>
+		Les personnages n'apparaissant que quelques secondes en moyenne par épisode d'apparition décèdent très vite 
+		contrairement aux autres. Toutefois l'interprétation reste difficile et il faut faire attention au conclusion : <br>
+		quelle est la causalité ? Est-ce parce que les personnages apparaissent peu de secondes qu'ils décèdent très vite
+		ou est-ce parce qu'ils décèdent vite qu'ils ne sont à l'écran que quelques secondes ? <br>
+		Il s'agit très probablement de <a href="methodo-duree.html#titre3">courbes de survie prédéterminée</a>.
+		Seuils inférieurs à 0,01% (<a href="methodo-duree.html#test_W_LR">statistiques du Log-Rang et de Wilcoxon</a>). <br>
+		Si vous souhaitez en savoir plus sur la lecture des courbes de survie (exemples et méthodologie général), 
+		<a href="methodo-duree.html">cliquez ici</a>.</p>
+	</figcaption>
+</figure>
+
+<hr>
+<a id="stat_REGULARITE"><h2 align="center">Statistiques descriptives de la variable REGULARITE<br>
+<a href="#REGULARITE">Retourner à la section du dictionnaire de la variable REGULARITE</a></h2></a>
+<table id='tableau_dico_var' border=6 align='center'><td bgcolor='#7E8382'><b>REGULARITE</b></td><td align='center' bgcolor='#7E8382'><b>Décès</B></td><td align='center' bgcolor='#7E8382'><b>Survivants</B></td><td align='center' bgcolor='#7E8382'><b>Effectifs</B></td><td align='center' bgcolor='#7E8382'><b>Rapport de mortalité</td>
+<tr><td bgcolor='#c4bebe'>Moins de 25%</td><td align="center">48% (22)</td><td align="center">52% (24)</td><td align="center">46</td><td align='center' bgcolor='#aec4df'>0,93</td></tr>
+<tr><td bgcolor='#c4bebe'>Entre 25 et 50%</td><td align="center">59% (43)</td><td align="center">41% (30)</td><td align="center">73</td><td align='center' bgcolor='#d9adab'>1,15</td></tr>
+<tr><td bgcolor='#c4bebe'>Entre 50 et 75%</td><td align="center">63% (38)</td><td align="center">37% (22)</td><td align="center">60</td><td align='center' bgcolor='#d67e79'>1,22</td></tr>
+<tr><td bgcolor='#c4bebe'>Plus de 75%</td><td align="center">65% (17)</td><td align="center">35% (9)</td><td align="center">26</td><td align='center' bgcolor='#d67e79'>1,26</td></tr>
+<tr><td bgcolor='#c4bebe'>NC</td><td align="center">44% (85)</td><td align="center">56% (108)</td><td align="center">193</td><td align='center' bgcolor='#aec4df'>0,85</td></tr>
+<tr><td bgcolor='#7E8382'><b>Total</b></td><td align="center" bgcolor="#7E8382"><b>205</b></td><td align="center" bgcolor="#7E8382"><b>193</b></td><td align="center" bgcolor="#7E8382"><b>398</b></td><td align="center" bgcolor="#7E8382"><b>1,00</b></td></tr></table>
+<br>
+
+<hr>
+<a id="stat_COHORTE"><h2 align="center">Statistiques descriptives de la variable COHORTE<br>
+<a href="#COHORTE">Retourner à la section du dictionnaire de la variable COHORTE</a></h2></a>
+<table id='tableau_dico_var' border=6 align='center'><td bgcolor='#7E8382'><b>COHORTE</b></td><td align='center' bgcolor='#7E8382'><b>Décès</B></td><td align='center' bgcolor='#7E8382'><b>Survivants</B></td><td align='center' bgcolor='#7E8382'><b>Effectifs</B></td><td align='center' bgcolor='#7E8382'><b>Rapport de mortalité</td>
+<tr><td bgcolor='#c4bebe'>Trois premiers épisodes de la saison une</td><td align="center">62% (51)</td><td align="center">38% (31)</td><td align="center">82</td><td align='center' bgcolor='#d67e79'>1,20</td></tr>
+<tr><td bgcolor='#c4bebe'>Trois premiers épisodes de la saison deux ou trois</td><td align="center">46% (25)</td><td align="center">54% (29)</td><td align="center">54</td><td align='center' bgcolor='#aec4df'>0,89</td></tr>
+<tr><td bgcolor='#c4bebe'>Autres des saisons une à trois</td><td align="center">56% (80)</td><td align="center">44% (62)</td><td align="center">142</td><td align='center' bgcolor='#d9adab'>1,09</td></tr>
+<tr><td bgcolor='#c4bebe'>Saisons quatre à sept</td><td align="center">41% (49)</td><td align="center">59% (71)</td><td align="center">120</td><td align='center' bgcolor='#89afdd'>0,80</td></tr>
+<tr><td bgcolor='#7E8382'><b>Total</b></td><td align="center" bgcolor="#7E8382"><b>205</b></td><td align="center" bgcolor="#7E8382"><b>193</b></td><td align="center" bgcolor="#7E8382"><b>398</b></td><td align="center" bgcolor="#7E8382"><b>1,00</b></td></tr></table>
+<br><figure>
+	<img class="lifetest"src="images_site/life_COHORTE.jpg" alt="When demographers play the game of thrones" id="lifetest"/>
+	<figcaption>
+		Nous avons montrer que les personnages de la cohorte 4 (saisons quatre à sept) sont des personnages secondaires voire mineurs 
+		tandis que les personnages de la cohorte 1 (personnages des premiers épisodes de la première saison) - voir dossier <a href="dossier.html">cohorte</a>.<br>		
+		Ainsi les personnages de la cohorte 4 meurent en effet plus rapidement que les autres<br>
+		Seuils inférieurs à 0,01% (d'après les <a href="methodo-duree.html#test_W_LR">statistiques du Log-Rang et de Wilcoxon</a>). <br>
+		Si vous souhaitez en savoir plus sur la lecture des courbes de survie (exemples et méthodologie général), 
+		<a href="methodo-duree.html">cliquez ici</a>.</p>
+	</figcaption>
+</figure>
+		</table><br>
+	
+	</div>
+	</body>
+	<footer><div id="pied"><p align="center">Romane Beaufort et Lucas Melissent - <a href="nous_contacter.html"><FONT COLOR="#aec4df">nous contacter</font></a><p> </</div></footer>
+</html> 

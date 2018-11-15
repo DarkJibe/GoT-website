@@ -1,0 +1,256 @@
+﻿<html>
+    <head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<link href="r_femme.css" rel="stylesheet" media="all" type="text/css">
+		<link href="commun.css" rel="stylesheet" media="all" type="text/css">
+		<title>Methodologie-logit</title>	
+			<div id="all">
+			<a href="accueil.html"><div id="image">
+				<div id="G"><img class="img_g" src="images_site/visages.jpg" alt="When demographers play the game of thrones" id="img_g"/></div>
+				<div id="M">
+					<img class="centre" src="images_site/bandeau_femme.jpg" alt="When demographers play the game of thrones" id="centre"/>
+				</div>
+				<div id="D"><img class="img_d" src="images_site/visages.jpg" alt="When demographers play the game of thrones" id="img_d"/></div>
+			</div></a>
+			<div id="menu">
+				<ul id="menu_contenu">
+					<li id ="menu_actuel"><span>GENERALITES</span>
+						<ul>
+							<li><a href="Accueil.html">Accueil</a></li>
+							<li><a href="remerciements.html">Remerciements</a></li>
+							<li><a href="Bibliographie.html">Bibliographie</a></li>
+							<li><a href="nous_contacter.html">Nous contacter</a></li>
+						</ul>
+					</li>
+					<li><span>NOTRE ETUDE</span>
+						<ul id="menu_inf">
+							<li><a href="qui_sommes_nous.html">Qui sommes-nous ?</a></li>
+							<li><a href="origines.html">Origines et déroulement du projet</a></li>
+							<li><a href="objectifs_etude.html">Objectifs de l'étude</a></li>
+							<li><span style="text-align:left">Notre base</span>
+                                <ul>
+                                    <li><a href="presentation_base.html">Présentation</a></li>
+                                    <li><a href="dico_var.html">Dictionnaires et statistiques des variables</a></li>
+                                </ul>
+							</li>
+							<li><a href="les_autres_etudes.html">Les autres études</a></li>
+						</ul>
+					</li>
+					<li style="background-color:#212223;"><span>METHODOLOGIE</span>
+						<ul>
+							<li><a href="methodo-logit.html">Régression logistique</a></li>
+							<li><a href="methodo-duree.html">Courbes de survie</a></li>
+						</ul>
+					</li>
+					<li><span>RESULTATS</span>
+                        <ul>
+                            <li> <span>Articles thématiques</span>
+                                <ul>
+									<li><a href="un_monde_violent.html">Un monde violent</a></li>
+                                    <li><a href="r_femme.html">La place des femmes</a></li>
+                                    <li><a href="r_corps.html">La place du corps</a></li>
+                                    <li><a href="r_hasard.html">La mort frappe-t-elle vraiment au hasard ?</a></li>
+									<li><a href="r_cohorte.html">Une cohorte plus à l'abris ?</a></li>
+									<li><a href="r_all.html">titre_all</a></li>
+                                 </ul>
+                            </li>
+                            <li><a href="dossier.html">Dossiers universitaires</a></li>
+                        </ul>
+					</li>
+					<li><span>BONUS</span>
+						<ul>
+							<li><a href="proba_pop.html">Liste des probabilités</a></li>
+							<li><a href="liens_entre_var.html">Des caractéristiques liées entre elles</a></li>
+							<li><a href="qualite.html">Qualité de nos modèles</a></li>
+							<li><a href="modele_complet.html">Télécharger et lire une régression</a></li>
+							<li><a href="carte.html">Carte des décès</a></li>
+							<li><a href="cal_deces.html">Calendriers</a></li>
+							<li><a href="titre_page_demo.html">Bonus_demo</a></li>
+							<li><a href="podium.html">Podidum</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+	</head>
+	<body>
+	<div id="gauche">
+		<a href="proba_AZ.html"><p id="t_centre"><b>Probabilités de décès</b></p>
+		<img class="article_G" src="images_site/article_proba.jpg" alt="When demographers play the game of thrones" id="article_G"/>
+		<p id="t_justifie">Vous avez lu nos articles. Oui, tous sans exception. Vous trouvez ça cool les liens, les photos et les risques de décéder sur le nom de chaque personnage. Mais … le nom de votre personnage préféré n’est jamais apparu. Faut dire qu’il faut être un expert de <i>GoT</i> pour autant apprécier Aggar. Vous avez drôlement envie de connaître sa probabilité de décéder ! Alors cliquer ici et vous aurez votre réponse. En plus, on peut classer par ordre alphabétique, du plus grand au plus faible risque de mourir … C’est drôle.</a></p>
+	</div>
+	<div id="droite">
+		<p id="t_centre"><a href="#titre0"><b>Plan de l'article</b></a></p>
+		<p id="plan_article"><a href="#titreI"><b>I- Principes généraux</b></a></p>
+		<p id="plan_article"><a href="#titreI_1">&ensp;1. Usages des régressions logistiques</a></p>
+		<p id="plan_article"><a href="#titreI_2">&ensp;2. Un exemple complet de lecture</b></a></p>	
+		<p id="plan_article"><a href="#titreII"><b>II- Méthodologie complète : pour aller plus loin encore !</b></a></p>		
+		<p id="plan_article"><a href="#titreII_1">&ensp;1. Les paramètres du modèles</a></p>
+		<p id="plan_article"><a href="#titreII_1a"><I>  &emsp;a) Les coefficients</I></a></p>
+		<p id="plan_article"><a href="#titreII_1b"><I>  &emsp;b) Les Odd Ratio</I></a></p>
+		<p id="plan_article"><a href="#titreII_1c"><I>  &emsp;c) La significativité</I></a></p>
+		<p id="plan_article"><a href="#titreII_2"><b>&ensp;2. Qualité du modèles</b></a></p>
+		<p id="plan_article"><a href="#titreII_2a"><I>  &emsp;a) Paires concordantes</I></a></p>
+		<p id="plan_article"><a href="#titreII_2b"><I>  &emsp;b) Aire sous la courbe de ROC</I></a></p>
+		<p id="plan_article"><a href="#titreII_2c"><I>  &emsp;c) AIC et SC</I></a></p>
+		<p id="plan_article"><a href="#titreb"><b>Pour aller plus loin</I></b></a></p>
+	</div>
+	<div id="contenu">
+	
+	<img id="blancgauche" src='images_site/curseurs/blanc.jpg' alt='Photo du personnage'/>
+	<img id="curseur" src='images_site/curseurs/lvl4.jpg' alt='Photo du personnage'/>
+	
+	<p id="titre_page">Méthodologie : régression logistique</p><br>
+	
+	<div id="floatright40">
+	<figure>
+	<img src="images_site/catelyn_patatra.jpg" alt="When demographers play the game of thrones" id="centre0"/>
+	<figcaption><p id="legende"><I>La fin de la désilusion pour Catelyn Stark </I></p></P></figcaption>
+	</figure>
+	</div>
+	
+	<p>Pour vouloir comprendre notre tambouille, vous devez être soit courageux soit irresponsable. Dans les deux cas, vous aimez souffrir. Nous, on les bichonne nos masos. Alors vous allez en avoir pour votre argent. Comment ça, vous n’avez pas payé ? Mince, il faut remédier à ça …</p>
+	
+	<h1><a id="titreI">I- Principes généraux</A></h1>
+	
+	<H2><a id="titreI_1">&ensp;1. Usages des régressions logistiques</a></h2>
+	
+	<p>Prenons un exemple concret (il n’y en aura pas beaucoup). 38% des personnages féminins décèdent au cours de la série contre 52% des personnages masculins.<br> « Chouette ! se dit <a href="http://gameofthrones.wikia.com/wiki/Catelyn_Stark">Catelyn<span><img class='img_mini' src='images_site/portraits/Catelyn_Stark.jpg' alt='Photo du personnage' id='img_mini'/><br>proba décès :<br> 91%</span></a>. J’ai moins de risque de mourir que mon <a href="http://gameofthrones.wikia.com/wiki/Ned_Stark">mari<span><img class='img_mini' src='images_site/portraits/Ned_Stark.jpg' alt='Photo du personnage' id='img_mini'/><br>proba décès :<br> 100%</span></a>. » Quand tout à coup patatra. Elle meurt. </p>
+	
+	<p>Alors déjà, si 38% c’est mieux que 52%, ce n’est pas la joie pour autant. Mais en plus ces risques globaux cachent bien des choses ! Les personnages féminins et masculins diffèrent en de nombreux points. Par exemple : les personnages masculins sont plus souvent des combattants et leurs homologues féminines se prostituent plus souvent. Or, un combattant a plus de risque de mourir qu’un non combattant (logique non ?) et un personnage qui se prostitue à moins de risque de mourir qu’un autre qui ne se prostitue pas ! (voir les <a href="Dico_var.html">statistiques descriptives</a>). Dès lors, comment savoir si les personnages féminins meurent moins <i>parce qu</i>’ils sont féminins (on parle alors d’<i>effet propre</i> du sexe sur la mortalité) ou si ceux sont leurs caractéristiques particulières qui les protègent (on parle d’<i>effet de composition</i> : par exemple, si les prostitué.e.s meurent moins, et que les personnages féminins se prostituent plus, alors les personnages féminins sont protégés par cet effet de composition).  </p>
+	
+	<p>Pour neutraliser les effets de composition, nous recourons aux régressions. Celles-ci nous permettent de déterminer l’effet propre du sexe sur les risques de mortalité « toutes choses égales par ailleurs ». Concrètement, on peut alors étudier l’impact du sexe sur la mortalité en faisant <i>comme si</i> les personnages féminins et masculins combattaient et se prostituaient autant. Génial, non ? </p>
+	
+	<p>Bref, on met toutes les caractéristiques qu’on veut dans le modèle. On n’oublie pas de dire au modèle si le personnage est mort ou non dans la série, sinon il galère … A partir de ça, le modèle peut calculer le risque théorique de mourir d’un personnage compte tenu de ses caractéristiques. Pas mal, non ? Vous pouvez jeter un œil à ces risques de décéder en <a href="proba_AZ.html">cliquant ici</a> !</p>
+	
+	<p>Les résultats des régressions peuvent être utiles pour faire des prédictions : vous disposez de risques calculés sur les sept premières saisons et vous les appliquez à la prochaine saison. C’est un peu osé parce que les <a href="https://fr.wikipedia.org/wiki/Game_of_Thrones">scénaristes<span><img class='img_mini' src='images_site/scenaristes.jpg' alt='Photo du personnage' id='img_mini'/></span></a> peuvent faire ce qu’ils veulent dans l’ultime saison. <a href="http://gameofthrones.wikia.com/wiki/Jon_Snow">Jon Snow<span><img class='img_mini' src='images_site/portraits/Jon_Snow.jpg' alt='Photo du personnage' id='img_mini'/><br>proba décès :<br> 2%</span></a> peut donc (re)mourir. On peut aussi s’en servir pour démontrer des causalités : par exemple Catelyn Stark est morte <i>parce qu</i>’elle était un grand seigneur et <a href="http://gameofthrones.wikia.com/wiki/Oberyn_Martell">Oberyn Martell<span><img class='img_mini' src='images_site/portraits/Oberyn_Martell.jpg' alt='Photo du personnage' id='img_mini'/><br>proba décès :<br> 100%</span></a> <i>parce qu</i>’il combattait. Encore une fois c’est osé. Ils sont surtout morts <i>parce que</i> les <mark>scénaristes</mark> l’ont décidé. Nous les utilisons simplement pour observer des liens entre le risque de mourir et certaines caractéristiques : il existe ainsi un lien entre le fait de combattre et de mourir ! </p>
+	
+	<h2><a id="titreI_2">&ensp;2. Un exemple complet de lecture</A></h2>
+	
+	<p>Pour ceux qui ne se sentent pas encore très à l'aise avec la lecture des régressions (on peut comprendre), nous proposons un exemple complet de lecture <a href="modele_complet.html">ici</a>. Pour d'autres exemples concrets, n’hésitez pas à vous reporter aux régressions présentées dans les articles (<a href="r_femme.html">La place des femmes</a>, <a href="r_corps.html">La place du corps</a>, …) qui sont toujours accompagnées de notes de lecture. C’est normalement compréhensible. </p>
+	
+	<p>Si malgré cela vous ne saisissez toujours pas … Dites-vous qu’il n’y a pas de mauvais élèves mais que des mauvais professeurs. </p>
+	
+	<p>Ça y est. Vous en savez assez pour lire les articles proposés. Toutefois, voici pour les curieux (ou masos) quelques détails supplémentaires pour comprendre les <a href="dossier.html">articles universitaires.</a></p>
+	
+	<h1><a id="titreII">II- Méthodologie complète : pour aller encore plus loin !</A></h1>
+	
+	<p>Ne vous en faites pas, ça reste obscur même pour <a href="qui_sommes_nous.html">Lucas<span>Pour en apprendre plus sur<br>cet historien ami des animaux,<br>cliquez ici !</span></a> !  </p>
+	
+	<h2><a id="titreII_1">&ensp;1. Les paramètres du modèles</a></h2>
+	
+	<I><a id="titreII_1a">&emsp;a) Coefficients</a></I><br><br>
+	
+	<img class="centre1" src="images_site/methodo_fig1.jpg" alt="When demographers play the game of thrones" id="centre1"/>
+	
+	<p>Avec <I>p</I> la probabilité de mourir au cours de la série, <I>Xi</i> les variables dépendantes, <I>Bi</i> les coefficients de régression calculés.</p>
+		
+	<p>Si ce coefficient est négatif : la caractéristique protège de la mort.</p>
+	
+	<p>Si ce coefficient est positif : la caractéristique expose à la mort.</p>
+	
+	<p>Toutefois, nous n’utilisons pas ces coefficients dans nos articles. En effet, il est très difficile d’interpréter ce coefficient et d’en faire des phrases concrètes. Dommage la formule est assez esthétique ! </p>
+	
+	<p><a href="qui_sommes_nous.html">Romane<span>Pour en apprendre plus sur<br>cette statisticienne amatrice de fromage,<br>cliquez ici !</span></a>, de son côté, peste : même les mathématiques peuvent s’expliquer ! « Mais cette formule n’est pas qu’esthétique ! Elle relie un nombre <i>p</i> (qui est un score ; plus le score est grand, plus le personnage a de risques de décéder) à des caractéristiques individuelles (<i>Xi</i>). Elle calcule l’intensité des liens (les <i>Bi</i>) entre les caractéristiques et les risques de décès. Pour cela elle dispose d’une vraie liste de personnages morts ou non. Elle va faire en sorte que ceux qui sont morts aient effectivement un « score » plus élevé que ceux qui sont vivants. Une fois que les <i>Bi</i> sont déterminés (il s’agit pour ceux qui sont copains-copains avec les mathématiques d’un problème de maximisation), <i>p</i> est une fonction des <i>Xi</i>.<br>
+	Oui mais pourquoi cette mocheté de fonction ln ? Simplement pour que le score (<i>p</i>) soit compris entre 0 et 1 et soit associable à une probabilité !</p>
+	
+	<I><a id="titreII_1b">&emsp;b) Odd Ratio</a></I>
+	
+	<p>Quoiqu'il en soit, nous préférons donc dans nos articles l’utilisation des Odds Ratios (OR). </p>
+	
+	<p>Si l’OR est plus petit que 1 alors la caractéristique protège de la mort. </P>
+	
+	<p>Si l’OR est plus grand que 1 alors la caractéristique expose à la mort. </p>
+	
+	<p>Mais quel est l’intérêt par rapport aux coefficients ? L’interprétation ! Si l’OR est de 2 pour le fait de combattre on peut alors dire que « par rapport à un personnage qui ne combat pas, un personnage qui combat a deux fois plus de risque de mourir plutôt que de ne pas mourir ». Si l’OR est de 0,5 pour la prostitution : « par rapport à un personnage qui ne se prostitue pas, un personnage qui se prostitue a deux fois moins (1/0,5=2) de risque de mourir plutôt que de ne pas mourir ». </p>
+	
+	<p>C’est plus commode, vous en conviendrez. </p>
+
+	<I><a id="titreII_1c">&emsp;c) Significativité</a></I>
+	
+	<p>La significativité statistique d’un coefficient permet d’évaluer le niveau de certitude selon lequel on peut affirmer qu’il existe un lien entre la caractéristique et le risque de décéder. Par exemple, pour une significativité de 5% : « il existe un risque de 5% pour que la sous ou la surmortalité mise au jour soit en fait inexistante ».</p>
+	
+	<p>En sciences humaines et sociales, nous prenons en général 5% de risque au maximum. Au-delà le risque de se planter est trop grand : le résultat est dit « non significatif ». Mais ce n’est qu’une convention et ça dépend de l’objectif ! Imaginez : vous avez une conjonctivite. Un nouveau médicament fait des merveilles. Seulement, il cause la mort dans 4% des cas. Vous prenez le risque ? En sciences humaines et sociales, 4% de risque c’est peu. En médecine, ça peut être dramatique … </p>
+	
+	<p>Nous, on aime tellement le risque que l’on vous indique même jusqu’à 10% (°) de risque ! Les lecteurs se souviendront qu’il faut prendre ces résultats avec des pincettes.   </p>
+	
+	<H2><a id="titreII_2">&ensp;2. Qualité du modèle</a></h2>
+	
+	<p>Notre modèle est créé ! Il reste à en évaluer la qualité. Dans les articles de quatre pages, nous n’en parlons pas. On vous demande un acte de foi. Vous pouvez toutefois retrouver des discussions sur la qualité des modèles <a href="qualite.html">ici.</a></p>
+	
+	<p>Nous pouvons distinguer deux types d’indicateurs :</p>
+	
+	<ul>
+	<li><i>(Type 1) Les indicateurs qui comparent les risques calculés par le modèle à la réalité</i></li>
+	</ul>
+	
+	<I><a id="titreII_2a">&emsp;a) Paires concordantes</a></I>
+	
+	<p>Une première manière d’évaluer la qualité du modèle est de compter le nombre de paires concordantes. D’accord, mais qu’est-ce que c’est ? </p>
+	
+	<p>Le logiciel trie nos personnages en deux groupes : ceux qui sont morts et ceux, plus chanceux, qui ne le sont pas. Il va ensuite créer des paires en prenant à chaque fois un personnage mort et un vivant. Il compare ensuite les risques de décéder (calculés par le modèle) de la paire :<br>
+	&ensp;-	Si le risque de mourir calculé par le modèle est plus fort pour le personnage effectivement mort que pour celui qui est en vie, c’est bien ! Cela veut dire que le modèle a marché : c’est une paire concordante.<br>
+	&ensp;-	Sinon, c’est une paire discordante. Le modèle n’explique pas le fait qu’un personnage soit mort dans la série et l’autre non.</p>
+	
+	<p>Nous avons 193 personnages vivants et 205 morts. Nous avons donc 39 565 paires à vérifier ! Plus la part de paires concordantes est élevée, plus le modèle est explicatif.<br>
+	Vous n'avez pas bien compris ? Pour plus d'explications sur les paires concordantes <a href="qualite.html">cliquez ici</a>.
+	<br>Attention ça se corse. </p>
+	
+	<I><a id="titreII_2b">&emsp;b) Aire sous la courbe de ROC</a></I>
+	
+	<p>Voilà un autre indicateur de qualité du modèle (nommé c). Il s’agit de l’aire sous la courbe de ROC (proposée par Hosmer et Lemeshow en 1941) qui varie en 0 et 1. Alors, autant on peut expliquer concrétement ce que c’est qu’une paire concordante, autant là … on ne peut pas. Toujours est-il que l’on considère que la discrimination des deux populations (ici les personnages décédés et les personnages vivants) est : <br>
+	&ensp;- nulle si l’aire sous la courbe vaut 0,5 <br>
+	&ensp;- acceptable si elle appartient à [0,7 ; 0,8[ ;<br>
+	&ensp;- excellente si elle appartient à [0,8 ; 0,9[ ;<br>
+	&ensp;- exceptionnelle si elle est supérieure ou égale à 0,9.</p>
+	
+	<p>Concrètement, le modèle comprend exceptionnellement bien ce qui différencie personnages vivants et personnages morts si l’indicateur est supérieur ou égal à 0,9.</p>
+	
+	<ul>
+	<li><i>(Type 2) Les indicateurs s’appuyant sur la vraisemblance du modèle</i></li>
+	</ul>
+	
+	<I><a id="titreII_2c">&emsp;c) AIC et SC</a></I>
+	
+	<p>La part de paires concordantes est cependant influencée par le nombre de variables introduites dans le modèle : plus j’injecte de 	variables dans mon modèle, plus celui-ci sera jugé « bon » par les indicateurs vus ci-dessus (paire concordante et aire sous la courbe de ROC). C’est assez facile à comprendre : n’importe quelle caractéristique peut expliquer une infime partie d’un phénomène. Toutefois, comment pallier ce biais ?</p>
+	
+	<p>Deux autres indicateurs nous renseignent sur la qualité du modèle tout en prenant en compte le nombre de variables introduites : le critère d’Alsaïke (AIC) et celui de Schwartz (SC) qui valent respectivement :</p>
+	
+	<img class="centre1" src="images_site/methodo_fig2.jpg" alt="When demographers play the game of thrones" id="centre1"/>
+
+	<P>Avec <i>L</i>, la valeur maximale de la vraisemblance (calculée avec les valeurs estimées des paramètres) et <i>K</i> le nombre de variables introduites dans le modèle.</p>
+	
+	<p>Plus ces critères sont petits, meilleure est la vraisemblance. Mais attention ! Si l’on ajoute une caractéristique supplémentaire, hop, les critères augmentent. Il faut donc vérifier, lorsque l’on ajoute une variable, que le gain en vraisemblance compense l’ajout de la variable : idéalement le critère doit diminuer. On peut se contenter d’une stagnation ou d’une légère augmentation si dans le même temps les paires concordantes et autres indicateurs augmentent fortement. </p>
+	
+	<p>Vous l’aurez compris : tout est question d’équilibre. Il faut mettre assez de variables pour expliquer au mieux un phénomène tout en restant parcimonieux pour ne pas perdre en vraisemblance.     </p>
+	
+	<p>Pour interpréter ces deux critères, il est utile de connaître leur valeur pour un modèle sans caractéristique explicative (<i>L0</i>). Si nos indicateurs deviennent supérieurs à ce modèle qui par définition n’explique rien … on a du souci à se faire. </p>
+	
+	<H2><a id="titreb">Pour aller plus loin</a></H2>
+	<p>Baptiste Janvier, « La significativité statistique », février 2001, disponible en ligne : 
+	<a href="http://baptiste.janvier.free.fr/stats/pdf/proba.pdf">http://baptiste.janvier.free.fr/stats/pdf/proba.pdf</a>, consulté le 13 avril 2018</p>
+	<p>Florence Gillaizeau, Sophie Grabar,  « Modèles de régression multiple », Sang Thrombose Vaisseaux, n°7, 2011, disponible en ligne : 
+	<a href="http://docplayer.fr/49631088-Modeles-de-regression-multiple.html">http://docplayer.fr/49631088-Modeles-de-regression-multiple.html</a>, consulté le 6 avril 2018  </p>
+	<p>Cédric Asfa,  « Le modèle Logit Théorie et application », Document de travail, Insee, 2016, disponible en ligne : <a href="https://www.insee.fr/fr/statistiques/fichier/2022139/Le-modele-Logit-CB.pdf">https://www.insee.fr/fr/statistiques/fichier/2022139/Le-modele-Logit-CB.pdf</a>, consulté le 6 avril 2018  </p>
+	
+		<p>
+			<h2>Vous cherchez un modèle sur un thème précis ?</h2>
+			<font size=3.5>[<a href="modele_femme.html">Modèle en plein écran</a>] [<a href="r_femme.html">Article complet (avec modèle)</a>]</font> La place des femmes <br>
+			<font size=3.5>[<a href="modele_corps.html">Modèle en plein écran</a>] [<a href="r_corps.html">Article complet (avec modèle)</a>]</font> La place du corps <br>
+			<font size=3.5>[<a href="modele_profil.html">Modèle en plein écran</a>] [<a href="r_hasard.html">Article complet (avec modèle)</a>]</font> La mort frappe-t-elle au hasard ? <br>
+			<font size=3.5>[<a href="modele_cohorte.html">Modèle en plein écran</a>] [<a href="r_cohorte.html">Article complet (avec modèle)</a>]</font> Une cohorte plus à l'abris ? <br>
+			<font size=3.5>[<a href="modele_all.html">Modèle en plein écran</a>] [<a href="r_all.html">Article complet (avec modèle)</a>]</font> <mark>Titre article allégeance</mark> 
+		</p>
+		
+		<p>
+		<h2>Vous cherchez autre chose ?</h2>
+		=> <a href="modele_complet.html">Télécharger et lire une régression</a><br>
+		=> <a href="qualite.html">Qualités des modèles</a><br>
+		=> Télécharger l'ensemble des modèles en <a href="pdf_site/modele_ensemble.pdf">PDF</a>
+		</p>
+	
+	</div>
+	</body>
+	<footer><div id="pied"><p align="center">Romane Beaufort et Lucas Melissent - <a href="nous_contacter.html"><FONT COLOR="#aec4df">nous contacter</font></a><p></div></footer>
+</html> 
